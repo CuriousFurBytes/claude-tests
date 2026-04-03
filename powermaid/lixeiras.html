@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lixeiras | POWERMAID</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/custom.css">
+  <script>
+    tailwind.config = {
+      theme: { extend: { colors: { 'pm-red': '#E53935', 'pm-dark': '#1a1a2e', 'pm-gray': '#4a4a5a' } } }
+    }
+  </script>
+</head>
+<body class="bg-base-100">
+
+  <!-- Navbar -->
+  <div class="navbar bg-base-100 shadow-lg sticky top-0 z-50 px-4 lg:px-8">
+    <div class="navbar-start">
+      <div class="dropdown">
+        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16"/></svg>
+        </div>
+        <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="mops.html">Mops</a></li>
+          <li><a href="lixeiras.html" class="font-semibold">Lixeiras</a></li>
+          <li><a href="lavanderia.html">Lavanderia</a></li>
+          <li><a href="sobre.html">Quem Somos</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </div>
+      <a href="index.html" class="btn btn-ghost text-xl font-black tracking-tight">
+        <span class="text-pm-red">POWER</span><span class="text-pm-dark">MAID</span>
+      </a>
+    </div>
+    <div class="navbar-center hidden lg:flex">
+      <ul class="menu menu-horizontal px-1 gap-1">
+        <li><a href="index.html" class="font-medium hover:text-pm-red">Home</a></li>
+        <li><a href="mops.html" class="font-medium hover:text-pm-red">Mops</a></li>
+        <li><a href="lixeiras.html" class="font-semibold nav-active">Lixeiras</a></li>
+        <li><a href="lavanderia.html" class="font-medium hover:text-pm-red">Lavanderia</a></li>
+        <li><a href="sobre.html" class="font-medium hover:text-pm-red">Quem Somos</a></li>
+        <li><a href="blog.html" class="font-medium hover:text-pm-red">Blog</a></li>
+        <li><a href="contato.html" class="font-medium hover:text-pm-red">Contato</a></li>
+      </ul>
+    </div>
+    <div class="navbar-end">
+      <a href="contato.html" class="btn btn-sm bg-pm-red text-white border-none hover:bg-red-700">Fale Conosco</a>
+    </div>
+  </div>
+
+  <!-- Page Header -->
+  <section class="bg-gradient-to-r from-gray-700 to-gray-900 py-16 px-4">
+    <div class="max-w-7xl mx-auto">
+      <div class="breadcrumbs text-sm text-white/60 mb-4">
+        <ul>
+          <li><a href="index.html" class="text-white/60 hover:text-white">Home</a></li>
+          <li class="text-white">Lixeiras</li>
+        </ul>
+      </div>
+      <h1 class="text-5xl font-black text-white">Lixeiras</h1>
+      <p class="text-white/80 mt-4 max-w-2xl text-lg">Design sofisticado em aço inox. Lixeiras com acabamento anti-fingerprint e funcionalidades inteligentes para cada ambiente.</p>
+    </div>
+  </section>
+
+  <!-- Products Grid -->
+  <section class="py-16 px-4 max-w-7xl mx-auto">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- Lixeira Inox -->
+      <div class="card bg-base-100 shadow-xl product-card">
+        <figure class="h-64 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center relative">
+          <svg viewBox="0 0 200 200" class="h-48">
+            <rect x="55" y="55" width="90" height="120" rx="6" fill="#B0BEC5"/>
+            <rect x="50" y="44" width="100" height="16" rx="5" fill="#90A4AE"/>
+            <rect x="75" y="28" width="50" height="20" rx="10" fill="none" stroke="#78909C" stroke-width="3"/>
+            <circle cx="100" cy="115" r="18" fill="#CFD8DC" opacity="0.6"/>
+            <rect x="55" y="55" width="90" height="4" fill="#78909C" opacity="0.3"/>
+          </svg>
+          <div class="absolute top-3 right-3 badge badge-neutral text-white">Inox</div>
+        </figure>
+        <div class="card-body">
+          <h3 class="card-title text-xl font-bold">Lixeira Inox</h3>
+          <p class="text-pm-gray text-sm">Balde interno removível em aço inox escovado. Acabamento premium com aro protetor.</p>
+          <div class="flex flex-wrap gap-2 mt-2">
+            <div class="badge badge-outline badge-sm">Removível</div>
+            <div class="badge badge-outline badge-sm">Escovado</div>
+          </div>
+          <div class="flex gap-2 mt-3">
+            <div class="badge badge-sm">3L</div>
+            <div class="badge badge-sm">5L</div>
+            <div class="badge badge-sm badge-primary text-white">12L</div>
+            <div class="badge badge-sm">20L</div>
+            <div class="badge badge-sm">30L</div>
+          </div>
+          <div class="card-actions justify-end mt-4">
+            <button class="btn bg-pm-red text-white border-none hover:bg-red-700">Detalhes</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lixeira Linea -->
+      <div class="card bg-base-100 shadow-xl product-card">
+        <figure class="h-64 bg-gradient-to-br from-gray-50 to-blue-50 flex items-center justify-center relative">
+          <svg viewBox="0 0 200 200" class="h-48">
+            <rect x="60" y="50" width="80" height="130" rx="4" fill="#CFD8DC"/>
+            <rect x="55" y="40" width="90" height="16" rx="3" fill="#B0BEC5"/>
+            <rect x="78" y="25" width="44" height="18" rx="9" fill="none" stroke="#90A4AE" stroke-width="3"/>
+            <line x1="60" y1="80" x2="140" y2="80" stroke="#B0BEC5" stroke-width="1"/>
+            <line x1="60" y1="110" x2="140" y2="110" stroke="#B0BEC5" stroke-width="1"/>
+            <line x1="60" y1="140" x2="140" y2="140" stroke="#B0BEC5" stroke-width="1"/>
+          </svg>
+          <div class="absolute top-3 right-3 badge badge-info text-white">Anti-Finger</div>
+        </figure>
+        <div class="card-body">
+          <h3 class="card-title text-xl font-bold">Lixeira Linea</h3>
+          <p class="text-pm-gray text-sm">Revestimento anti-fingerprint que evita marcas de dedos. Design linear e elegante para ambientes modernos.</p>
+          <div class="flex flex-wrap gap-2 mt-2">
+            <div class="badge badge-outline badge-sm">Anti-Fingerprint</div>
+            <div class="badge badge-outline badge-sm">Elegante</div>
+          </div>
+          <div class="flex gap-2 mt-3">
+            <div class="badge badge-sm">5L</div>
+            <div class="badge badge-sm badge-primary text-white">12L</div>
+            <div class="badge badge-sm">20L</div>
+          </div>
+          <div class="card-actions justify-end mt-4">
+            <button class="btn bg-pm-red text-white border-none hover:bg-red-700">Detalhes</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lixeira Basculante -->
+      <div class="card bg-base-100 shadow-xl product-card">
+        <figure class="h-64 bg-gradient-to-br from-gray-50 to-gray-200 flex items-center justify-center relative">
+          <svg viewBox="0 0 200 200" class="h-48">
+            <rect x="60" y="60" width="80" height="120" rx="5" fill="#90A4AE"/>
+            <rect x="55" y="45" width="90" height="20" rx="5" fill="#78909C"/>
+            <rect x="70" y="45" width="60" height="10" rx="3" fill="#607D8B"/>
+            <ellipse cx="100" cy="50" rx="30" ry="5" fill="#546E7A" opacity="0.3"/>
+            <rect x="60" y="170" width="80" height="10" rx="3" fill="#607D8B"/>
+          </svg>
+          <div class="absolute top-3 right-3 badge badge-warning text-white">Basculante</div>
+        </figure>
+        <div class="card-body">
+          <h3 class="card-title text-xl font-bold">Lixeira Basculante</h3>
+          <p class="text-pm-gray text-sm">Tampa basculante em aço inox com base antiderrapante. Prática e higiênica para o dia a dia.</p>
+          <div class="flex flex-wrap gap-2 mt-2">
+            <div class="badge badge-outline badge-sm">Basculante</div>
+            <div class="badge badge-outline badge-sm">Antiderrapante</div>
+          </div>
+          <div class="flex gap-2 mt-3">
+            <div class="badge badge-sm">3L</div>
+            <div class="badge badge-sm badge-primary text-white">5L</div>
+            <div class="badge badge-sm">12L</div>
+          </div>
+          <div class="card-actions justify-end mt-4">
+            <button class="btn bg-pm-red text-white border-none hover:bg-red-700">Detalhes</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lixeira de Bancada Matte -->
+      <div class="card bg-base-100 shadow-xl product-card">
+        <figure class="h-64 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center relative">
+          <svg viewBox="0 0 200 200" class="h-48">
+            <rect x="70" y="80" width="60" height="90" rx="4" fill="#424242"/>
+            <rect x="65" y="70" width="70" height="16" rx="4" fill="#616161"/>
+            <rect x="85" y="58" width="30" height="16" rx="8" fill="none" stroke="#757575" stroke-width="2"/>
+            <circle cx="100" cy="130" r="10" fill="#757575" opacity="0.4"/>
+          </svg>
+          <div class="absolute top-3 right-3 badge badge-error text-white">Matte</div>
+        </figure>
+        <div class="card-body">
+          <h3 class="card-title text-xl font-bold">Lixeira Bancada Matte</h3>
+          <p class="text-pm-gray text-sm">Compacta e ideal para bancadas de cozinha e banheiros. Acabamento matte sofisticado com pedal.</p>
+          <div class="flex flex-wrap gap-2 mt-2">
+            <div class="badge badge-outline badge-sm">Matte</div>
+            <div class="badge badge-outline badge-sm">Pedal</div>
+            <div class="badge badge-outline badge-sm">Compacta</div>
+          </div>
+          <div class="flex gap-2 mt-3">
+            <div class="badge badge-sm badge-primary text-white">3L</div>
+            <div class="badge badge-sm">5L</div>
+          </div>
+          <div class="card-actions justify-end mt-4">
+            <button class="btn bg-pm-red text-white border-none hover:bg-red-700">Detalhes</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lixeira Slim -->
+      <div class="card bg-base-100 shadow-xl product-card">
+        <figure class="h-64 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center relative">
+          <svg viewBox="0 0 200 200" class="h-48">
+            <rect x="75" y="40" width="50" height="140" rx="4" fill="#B0BEC5"/>
+            <rect x="70" y="30" width="60" height="16" rx="4" fill="#90A4AE"/>
+            <rect x="88" y="18" width="24" height="16" rx="8" fill="none" stroke="#78909C" stroke-width="2"/>
+            <circle cx="100" cy="110" r="12" fill="#CFD8DC" opacity="0.5"/>
+          </svg>
+          <div class="absolute top-3 right-3 badge badge-success text-white">Slim</div>
+        </figure>
+        <div class="card-body">
+          <h3 class="card-title text-xl font-bold">Lixeira Slim</h3>
+          <p class="text-pm-gray text-sm">Design slim em aço inox escovado com alça para transporte. Ideal para espaços reduzidos.</p>
+          <div class="flex flex-wrap gap-2 mt-2">
+            <div class="badge badge-outline badge-sm">Slim</div>
+            <div class="badge badge-outline badge-sm">Alça</div>
+            <div class="badge badge-outline badge-sm">Escovado</div>
+          </div>
+          <div class="flex gap-2 mt-3">
+            <div class="badge badge-sm badge-primary text-white">5L</div>
+            <div class="badge badge-sm">12L</div>
+          </div>
+          <div class="card-actions justify-end mt-4">
+            <button class="btn bg-pm-red text-white border-none hover:bg-red-700">Detalhes</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lixeira Aramada -->
+      <div class="card bg-base-100 shadow-xl product-card">
+        <figure class="h-64 bg-gradient-to-br from-orange-50 to-gray-50 flex items-center justify-center relative">
+          <svg viewBox="0 0 200 200" class="h-48">
+            <ellipse cx="100" cy="170" rx="45" ry="10" fill="#BDBDBD" opacity="0.3"/>
+            <path d="M65 60 L65 165 Q65 175 75 175 L125 175 Q135 175 135 165 L135 60" fill="none" stroke="#424242" stroke-width="3"/>
+            <line x1="75" y1="60" x2="75" y2="175" stroke="#616161" stroke-width="1.5"/>
+            <line x1="90" y1="60" x2="90" y2="175" stroke="#616161" stroke-width="1.5"/>
+            <line x1="110" y1="60" x2="110" y2="175" stroke="#616161" stroke-width="1.5"/>
+            <line x1="125" y1="60" x2="125" y2="175" stroke="#616161" stroke-width="1.5"/>
+            <line x1="65" y1="90" x2="135" y2="90" stroke="#616161" stroke-width="1.5"/>
+            <line x1="65" y1="120" x2="135" y2="120" stroke="#616161" stroke-width="1.5"/>
+            <line x1="65" y1="150" x2="135" y2="150" stroke="#616161" stroke-width="1.5"/>
+            <rect x="60" y="50" width="80" height="14" rx="3" fill="#424242"/>
+          </svg>
+        </figure>
+        <div class="card-body">
+          <h3 class="card-title text-xl font-bold">Lixeira Aramada</h3>
+          <p class="text-pm-gray text-sm">Ferro pintado com design vazado. Leve, resistente e perfeita para escritórios e quartos.</p>
+          <div class="flex flex-wrap gap-2 mt-2">
+            <div class="badge badge-outline badge-sm">Ferro</div>
+            <div class="badge badge-outline badge-sm">Leve</div>
+            <div class="badge badge-outline badge-sm">Vazada</div>
+          </div>
+          <div class="flex gap-2 mt-3">
+            <div class="badge badge-sm badge-primary text-white">8L</div>
+            <div class="badge badge-sm">12L</div>
+          </div>
+          <div class="card-actions justify-end mt-4">
+            <button class="btn bg-pm-red text-white border-none hover:bg-red-700">Detalhes</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Size Guide -->
+  <section class="bg-base-200 py-16 px-4">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-3xl font-black text-pm-dark text-center mb-10">Guia de Tamanhos</h2>
+      <div class="overflow-x-auto">
+        <table class="table table-zebra bg-base-100 shadow-md rounded-xl">
+          <thead>
+            <tr class="bg-pm-dark text-white">
+              <th>Capacidade</th>
+              <th>Indicação</th>
+              <th>Ambiente Ideal</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="font-bold">3 Litros</td>
+              <td>Resíduos leves, descarte rápido</td>
+              <td><div class="badge badge-ghost">Bancada</div> <div class="badge badge-ghost">Banheiro</div></td>
+            </tr>
+            <tr>
+              <td class="font-bold">5 Litros</td>
+              <td>Uso individual ou espaços pequenos</td>
+              <td><div class="badge badge-ghost">Escritório</div> <div class="badge badge-ghost">Quarto</div></td>
+            </tr>
+            <tr>
+              <td class="font-bold">12 Litros</td>
+              <td>Uso diário residencial</td>
+              <td><div class="badge badge-ghost">Cozinha</div> <div class="badge badge-ghost">Lavanderia</div></td>
+            </tr>
+            <tr>
+              <td class="font-bold">20 Litros</td>
+              <td>Famílias maiores ou áreas comuns</td>
+              <td><div class="badge badge-ghost">Cozinha</div> <div class="badge badge-ghost">Área de Serviço</div></td>
+            </tr>
+            <tr>
+              <td class="font-bold">30 Litros</td>
+              <td>Alto volume de descarte</td>
+              <td><div class="badge badge-ghost">Comercial</div> <div class="badge badge-ghost">Condomínio</div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-pm-dark text-white pt-12 pb-8 px-4">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-8 border-b border-white/10">
+        <div>
+          <h3 class="text-2xl font-black mb-4"><span class="text-pm-red">POWER</span>MAID</h3>
+          <p class="text-white/60 text-sm">Inovadora, Moderna, Funcional. Nascida dentro do Grupo Camesa.</p>
+        </div>
+        <div>
+          <h4 class="font-bold text-lg mb-4">Produtos</h4>
+          <ul class="space-y-2 text-white/60">
+            <li><a href="mops.html" class="hover:text-pm-red transition-colors">Mops de Limpeza</a></li>
+            <li><a href="lixeiras.html" class="hover:text-pm-red transition-colors">Lixeiras</a></li>
+            <li><a href="lavanderia.html" class="hover:text-pm-red transition-colors">Lavanderia</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-lg mb-4">Institucional</h4>
+          <ul class="space-y-2 text-white/60">
+            <li><a href="sobre.html" class="hover:text-pm-red transition-colors">Quem Somos</a></li>
+            <li><a href="blog.html" class="hover:text-pm-red transition-colors">Blog</a></li>
+            <li><a href="contato.html" class="hover:text-pm-red transition-colors">Contato</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-lg mb-4">Contato</h4>
+          <ul class="space-y-2 text-white/60 text-sm">
+            <li>contato@powermaid.com.br</li>
+            <li>(11) 4002-8922</li>
+            <li>São Paulo, SP - Brasil</li>
+          </ul>
+        </div>
+      </div>
+      <div class="text-center pt-6 text-white/40 text-sm">
+        <p>&copy; 2026 Powermaid - Grupo Camesa. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

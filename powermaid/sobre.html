@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quem Somos | POWERMAID</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/custom.css">
+  <script>
+    tailwind.config = {
+      theme: { extend: { colors: { 'pm-red': '#E53935', 'pm-dark': '#1a1a2e', 'pm-gray': '#4a4a5a' } } }
+    }
+  </script>
+</head>
+<body class="bg-base-100">
+
+  <!-- Navbar -->
+  <div class="navbar bg-base-100 shadow-lg sticky top-0 z-50 px-4 lg:px-8">
+    <div class="navbar-start">
+      <div class="dropdown">
+        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16"/></svg>
+        </div>
+        <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="mops.html">Mops</a></li>
+          <li><a href="lixeiras.html">Lixeiras</a></li>
+          <li><a href="lavanderia.html">Lavanderia</a></li>
+          <li><a href="sobre.html" class="font-semibold">Quem Somos</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </div>
+      <a href="index.html" class="btn btn-ghost text-xl font-black tracking-tight">
+        <span class="text-pm-red">POWER</span><span class="text-pm-dark">MAID</span>
+      </a>
+    </div>
+    <div class="navbar-center hidden lg:flex">
+      <ul class="menu menu-horizontal px-1 gap-1">
+        <li><a href="index.html" class="font-medium hover:text-pm-red">Home</a></li>
+        <li><a href="mops.html" class="font-medium hover:text-pm-red">Mops</a></li>
+        <li><a href="lixeiras.html" class="font-medium hover:text-pm-red">Lixeiras</a></li>
+        <li><a href="lavanderia.html" class="font-medium hover:text-pm-red">Lavanderia</a></li>
+        <li><a href="sobre.html" class="font-semibold nav-active">Quem Somos</a></li>
+        <li><a href="blog.html" class="font-medium hover:text-pm-red">Blog</a></li>
+        <li><a href="contato.html" class="font-medium hover:text-pm-red">Contato</a></li>
+      </ul>
+    </div>
+    <div class="navbar-end">
+      <a href="contato.html" class="btn btn-sm bg-pm-red text-white border-none hover:bg-red-700">Fale Conosco</a>
+    </div>
+  </div>
+
+  <!-- Page Header -->
+  <section class="hero-gradient py-20 px-4 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-5">
+      <svg viewBox="0 0 1440 400" class="w-full h-full">
+        <circle cx="300" cy="100" r="200" fill="white"/>
+        <circle cx="1100" cy="300" r="180" fill="white"/>
+      </svg>
+    </div>
+    <div class="max-w-7xl mx-auto text-center relative z-10">
+      <div class="badge badge-outline badge-lg text-white border-white/50 mb-4">Nossa História</div>
+      <h1 class="text-5xl lg:text-6xl font-black text-white mb-4">Quem Somos</h1>
+      <p class="text-white/80 max-w-2xl mx-auto text-lg">Nascida dentro do Grupo Camesa, a Powermaid carrega mais de 40 anos de tradição e excelência.</p>
+    </div>
+  </section>
+
+  <!-- History Section -->
+  <section class="py-20 px-4 max-w-7xl mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div>
+        <div class="badge badge-error badge-outline mb-4">Grupo Camesa</div>
+        <h2 class="text-4xl font-black text-pm-dark mb-6">Tradição que Inspira Inovação</h2>
+        <p class="text-pm-gray mb-4 leading-relaxed">
+          A Powermaid nasceu dentro do Grupo Camesa, que há mais de 40 anos se tornou destaque nos lares brasileiros, estando entre os líderes do seu segmento.
+        </p>
+        <p class="text-pm-gray mb-4 leading-relaxed">
+          Com a missão de revolucionar o dia a dia dos consumidores, a Powermaid oferece produtos que tornam as tarefas domésticas muito mais práticas e prazerosas, sempre com excelência em qualidade e design diferenciado.
+        </p>
+        <p class="text-pm-gray leading-relaxed">
+          Buscamos constantemente a inovação, aplicando tecnologia de ponta em cada produto para oferecer soluções modernas e funcionais que se adaptam à vida contemporânea.
+        </p>
+      </div>
+      <div class="flex justify-center">
+        <svg viewBox="0 0 500 400" class="w-full max-w-md">
+          <rect x="20" y="20" width="460" height="360" rx="20" fill="#f8f9fa"/>
+          <rect x="40" y="50" width="200" height="140" rx="10" fill="#E53935" opacity="0.1"/>
+          <rect x="260" y="50" width="200" height="140" rx="10" fill="#1a1a2e" opacity="0.1"/>
+          <rect x="40" y="210" width="420" height="140" rx="10" fill="#E53935" opacity="0.05"/>
+          <text x="140" y="130" text-anchor="middle" fill="#E53935" font-size="48" font-weight="bold">40+</text>
+          <text x="140" y="160" text-anchor="middle" fill="#4a4a5a" font-size="14">Anos de História</text>
+          <text x="360" y="130" text-anchor="middle" fill="#1a1a2e" font-size="48" font-weight="bold">50+</text>
+          <text x="360" y="160" text-anchor="middle" fill="#4a4a5a" font-size="14">Produtos</text>
+          <text x="250" y="280" text-anchor="middle" fill="#E53935" font-size="20" font-weight="bold">GRUPO CAMESA</text>
+          <text x="250" y="310" text-anchor="middle" fill="#4a4a5a" font-size="13">Líder no segmento de produtos para o lar</text>
+          <text x="250" y="335" text-anchor="middle" fill="#4a4a5a" font-size="13">Presença em todo o Brasil</text>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values -->
+  <section class="bg-base-200 py-20 px-4">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <div class="badge badge-error badge-outline mb-4">Nossos Valores</div>
+        <h2 class="text-4xl font-black text-pm-dark">O que Nos Move</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="card bg-base-100 shadow-lg">
+          <div class="card-body items-center text-center">
+            <div class="w-20 h-20 rounded-full bg-gradient-to-br from-red-400 to-red-600 flex items-center justify-center mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+              </svg>
+            </div>
+            <h3 class="card-title text-2xl font-bold">Inovação</h3>
+            <p class="text-pm-gray mt-2">Investimos constantemente em pesquisa e desenvolvimento para criar produtos que realmente fazem diferença no dia a dia.</p>
+          </div>
+        </div>
+
+        <div class="card bg-base-100 shadow-lg">
+          <div class="card-body items-center text-center">
+            <div class="w-20 h-20 rounded-full bg-gradient-to-br from-pm-dark to-gray-700 flex items-center justify-center mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+              </svg>
+            </div>
+            <h3 class="card-title text-2xl font-bold">Qualidade</h3>
+            <p class="text-pm-gray mt-2">Cada produto passa por rigoroso controle de qualidade para garantir durabilidade, segurança e satisfação total.</p>
+          </div>
+        </div>
+
+        <div class="card bg-base-100 shadow-lg">
+          <div class="card-body items-center text-center">
+            <div class="w-20 h-20 rounded-full bg-gradient-to-br from-red-300 to-red-500 flex items-center justify-center mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+              </svg>
+            </div>
+            <h3 class="card-title text-2xl font-bold">Cuidado</h3>
+            <p class="text-pm-gray mt-2">Pensamos em cada detalhe com carinho, porque sabemos que nossos produtos fazem parte da rotina do seu lar.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline -->
+  <section class="py-20 px-4 max-w-5xl mx-auto">
+    <div class="text-center mb-16">
+      <div class="badge badge-error badge-outline mb-4">Linha do Tempo</div>
+      <h2 class="text-4xl font-black text-pm-dark">Nossa Trajetória</h2>
+    </div>
+
+    <ul class="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
+      <li>
+        <div class="timeline-middle">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#E53935" class="h-5 w-5">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/>
+          </svg>
+        </div>
+        <div class="timeline-start md:text-end mb-10">
+          <time class="font-mono text-pm-red font-bold text-lg">1980s</time>
+          <div class="text-xl font-black text-pm-dark">Fundação do Grupo Camesa</div>
+          <p class="text-pm-gray">O Grupo Camesa inicia suas operações, tornando-se rapidamente referência no mercado brasileiro de produtos para o lar.</p>
+        </div>
+        <hr class="bg-pm-red"/>
+      </li>
+      <li>
+        <hr class="bg-pm-red"/>
+        <div class="timeline-middle">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#E53935" class="h-5 w-5">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/>
+          </svg>
+        </div>
+        <div class="timeline-end mb-10">
+          <time class="font-mono text-pm-red font-bold text-lg">2000s</time>
+          <div class="text-xl font-black text-pm-dark">Expansão Nacional</div>
+          <p class="text-pm-gray">Consolidação como líder no segmento com presença em todo o território nacional e milhares de pontos de venda.</p>
+        </div>
+        <hr class="bg-pm-red"/>
+      </li>
+      <li>
+        <hr class="bg-pm-red"/>
+        <div class="timeline-middle">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#E53935" class="h-5 w-5">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/>
+          </svg>
+        </div>
+        <div class="timeline-start md:text-end mb-10">
+          <time class="font-mono text-pm-red font-bold text-lg">2015</time>
+          <div class="text-xl font-black text-pm-dark">Nasce a Powermaid</div>
+          <p class="text-pm-gray">A marca Powermaid é lançada com foco em inovação, modernidade e funcionalidade em produtos de limpeza e organização.</p>
+        </div>
+        <hr class="bg-pm-red"/>
+      </li>
+      <li>
+        <hr class="bg-pm-red"/>
+        <div class="timeline-middle">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#E53935" class="h-5 w-5">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/>
+          </svg>
+        </div>
+        <div class="timeline-end mb-10">
+          <time class="font-mono text-pm-red font-bold text-lg">2026</time>
+          <div class="text-xl font-black text-pm-dark">Linha Completa</div>
+          <p class="text-pm-gray">Mais de 50 produtos na linha, incluindo mops, lixeiras, lavanderia e acessórios. Presença em grandes varejistas nacionais.</p>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <!-- Mission / Vision -->
+  <section class="bg-pm-red py-16 px-4">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-white">
+        <div class="text-center p-6">
+          <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-white/20 flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          </div>
+          <h3 class="text-2xl font-bold mb-3">Missão</h3>
+          <p class="text-white/80">Revolucionar o dia a dia dos consumidores com produtos inovadores que tornam as tarefas domésticas mais práticas e prazerosas.</p>
+        </div>
+        <div class="text-center p-6">
+          <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-white/20 flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+          </div>
+          <h3 class="text-2xl font-bold mb-3">Visão</h3>
+          <p class="text-white/80">Ser a marca referência em soluções de limpeza e organização para o lar no Brasil, reconhecida pela inovação e qualidade.</p>
+        </div>
+        <div class="text-center p-6">
+          <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-white/20 flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+          </div>
+          <h3 class="text-2xl font-bold mb-3">Valores</h3>
+          <p class="text-white/80">Inovação constante, qualidade sem compromisso, design funcional e respeito ao consumidor em cada detalhe.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-pm-dark text-white pt-12 pb-8 px-4">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-8 border-b border-white/10">
+        <div>
+          <h3 class="text-2xl font-black mb-4"><span class="text-pm-red">POWER</span>MAID</h3>
+          <p class="text-white/60 text-sm">Inovadora, Moderna, Funcional. Nascida dentro do Grupo Camesa.</p>
+        </div>
+        <div>
+          <h4 class="font-bold text-lg mb-4">Produtos</h4>
+          <ul class="space-y-2 text-white/60">
+            <li><a href="mops.html" class="hover:text-pm-red transition-colors">Mops de Limpeza</a></li>
+            <li><a href="lixeiras.html" class="hover:text-pm-red transition-colors">Lixeiras</a></li>
+            <li><a href="lavanderia.html" class="hover:text-pm-red transition-colors">Lavanderia</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-lg mb-4">Institucional</h4>
+          <ul class="space-y-2 text-white/60">
+            <li><a href="sobre.html" class="hover:text-pm-red transition-colors">Quem Somos</a></li>
+            <li><a href="blog.html" class="hover:text-pm-red transition-colors">Blog</a></li>
+            <li><a href="contato.html" class="hover:text-pm-red transition-colors">Contato</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-lg mb-4">Contato</h4>
+          <ul class="space-y-2 text-white/60 text-sm">
+            <li>contato@powermaid.com.br</li>
+            <li>(11) 4002-8922</li>
+            <li>São Paulo, SP - Brasil</li>
+          </ul>
+        </div>
+      </div>
+      <div class="text-center pt-6 text-white/40 text-sm">
+        <p>&copy; 2026 Powermaid - Grupo Camesa. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

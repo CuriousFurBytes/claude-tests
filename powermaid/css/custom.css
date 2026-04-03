@@ -1,0 +1,95 @@
+/* Powermaid Custom Styles */
+:root {
+  --pm-red: #E53935;
+  --pm-dark: #1a1a2e;
+  --pm-gray: #4a4a5a;
+}
+
+/* Hero gradient overlay */
+.hero-gradient {
+  background: linear-gradient(135deg, rgba(229, 57, 53, 0.9) 0%, rgba(26, 26, 46, 0.95) 100%);
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Product card hover */
+.product-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Category card */
+.category-card {
+  transition: all 0.3s ease;
+}
+.category-card:hover {
+  transform: scale(1.03);
+}
+
+/* Animate on scroll placeholder */
+.fade-in {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Stats counter */
+.stat-item {
+  transition: transform 0.3s ease;
+}
+.stat-item:hover {
+  transform: scale(1.05);
+}
+
+/* Blog card */
+.blog-card img {
+  transition: transform 0.5s ease;
+}
+.blog-card:hover img {
+  transform: scale(1.1);
+}
+
+/* Nav active link */
+.nav-active {
+  border-bottom: 2px solid #E53935;
+  color: #E53935 !important;
+}
+
+/* Footer wave */
+.footer-wave {
+  position: relative;
+}
+.footer-wave::before {
+  content: '';
+  position: absolute;
+  top: -40px;
+  left: 0;
+  right: 0;
+  height: 40px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 40'%3E%3Cpath fill='%231a1a2e' d='M0,20 C360,40 720,0 1080,20 C1260,30 1350,25 1440,20 L1440,40 L0,40 Z'/%3E%3C/svg%3E") no-repeat bottom;
+  background-size: cover;
+}
+
+/* Placeholder image styles */
+.placeholder-img {
+  background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Linha Lavanderia | POWERMAID</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/custom.css">
+  <script>
+    tailwind.config = {
+      theme: { extend: { colors: { 'pm-red': '#E53935', 'pm-dark': '#1a1a2e', 'pm-gray': '#4a4a5a' } } }
+    }
+  </script>
+</head>
+<body class="bg-base-100">
+
+  <!-- Navbar -->
+  <div class="navbar bg-base-100 shadow-lg sticky top-0 z-50 px-4 lg:px-8">
+    <div class="navbar-start">
+      <div class="dropdown">
+        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16"/></svg>
+        </div>
+        <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="mops.html">Mops</a></li>
+          <li><a href="lixeiras.html">Lixeiras</a></li>
+          <li><a href="lavanderia.html" class="font-semibold">Lavanderia</a></li>
+          <li><a href="sobre.html">Quem Somos</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </div>
+      <a href="index.html" class="btn btn-ghost text-xl font-black tracking-tight">
+        <span class="text-pm-red">POWER</span><span class="text-pm-dark">MAID</span>
+      </a>
+    </div>
+    <div class="navbar-center hidden lg:flex">
+      <ul class="menu menu-horizontal px-1 gap-1">
+        <li><a href="index.html" class="font-medium hover:text-pm-red">Home</a></li>
+        <li><a href="mops.html" class="font-medium hover:text-pm-red">Mops</a></li>
+        <li><a href="lixeiras.html" class="font-medium hover:text-pm-red">Lixeiras</a></li>
+        <li><a href="lavanderia.html" class="font-semibold nav-active">Lavanderia</a></li>
+        <li><a href="sobre.html" class="font-medium hover:text-pm-red">Quem Somos</a></li>
+        <li><a href="blog.html" class="font-medium hover:text-pm-red">Blog</a></li>
+        <li><a href="contato.html" class="font-medium hover:text-pm-red">Contato</a></li>
+      </ul>
+    </div>
+    <div class="navbar-end">
+      <a href="contato.html" class="btn btn-sm bg-pm-red text-white border-none hover:bg-red-700">Fale Conosco</a>
+    </div>
+  </div>
+
+  <!-- Page Header -->
+  <section class="bg-gradient-to-r from-blue-600 to-blue-800 py-16 px-4">
+    <div class="max-w-7xl mx-auto">
+      <div class="breadcrumbs text-sm text-white/60 mb-4">
+        <ul>
+          <li><a href="index.html" class="text-white/60 hover:text-white">Home</a></li>
+          <li class="text-white">Lavanderia</li>
+        </ul>
+      </div>
+      <h1 class="text-5xl font-black text-white">Linha Lavanderia</h1>
+      <p class="text-white/80 mt-4 max-w-2xl text-lg">Soluções inteligentes para organizar e otimizar sua lavanderia. Praticidade e design em cada produto.</p>
+    </div>
+  </section>
+
+  <!-- Products Grid -->
+  <section class="py-16 px-4 max-w-7xl mx-auto">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- Varal Retrátil -->
+      <div class="card bg-base-100 shadow-xl product-card">
+        <figure class="h-64 bg-gradient-to-br from-blue-50 to-cyan-50 flex items-center justify-center relative">
+          <svg viewBox="0 0 250 200" class="h-44">
+            <rect x="40" y="60" width="30" height="80" rx="4" fill="#1E88E5"/>
+            <rect x="180" y="60" width="30" height="80" rx="4" fill="#1E88E5"/>
+            <line x1="55" y1="80" x2="195" y2="80" stroke="#90CAF9" stroke-width="2"/>
+            <line x1="55" y1="95" x2="195" y2="95" stroke="#90CAF9" stroke-width="2"/>
+            <line x1="55" y1="110" x2="195" y2="110" stroke="#90CAF9" stroke-width="2"/>
+            <line x1="55" y1="125" x2="195" y2="125" stroke="#90CAF9" stroke-width="2"/>
+            <rect x="80" y="70" width="15" height="30" rx="2" fill="#BBDEFB" opacity="0.7"/>
+            <rect x="110" y="68" width="12" height="35" rx="2" fill="#E3F2FD" opacity="0.7"/>
+            <rect x="140" y="72" width="18" height="28" rx="2" fill="#BBDEFB" opacity="0.7"/>
+          </svg>
+          <div class="absolute top-3 left-3 badge badge-info text-white font-bold">Retrátil</div>
+        </figure>
+        <div class="card-body">
+          <h3 class="card-title text-xl font-bold">Varal Retrátil</h3>
+          <p class="text-pm-gray text-sm">Prático e resistente, ideal para espaços pequenos. Recolhe automaticamente quando não está em uso.</p>
+          <div class="flex flex-wrap gap-2 mt-2">
+            <div class="badge badge-outline badge-sm">Automático</div>
+            <div class="badge badge-outline badge-sm">Compacto</div>
+          </div>
+          <div class="card-actions justify-end mt-4">
+            <button class="btn bg-pm-red text-white border-none hover:bg-red-700">Detalhes</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tábua de Passar -->
+      <div class="card bg-base-100 shadow-xl product-card">
+        <figure class="h-64 bg-gradient-to-br from-purple-50 to-blue-50 flex items-center justify-center relative">
+          <svg viewBox="0 0 250 200" class="h-44">
+            <path d="M40 90 L210 90 L220 95 L210 100 L40 100 Z" fill="#9575CD"/>
+            <line x1="60" y1="100" x2="50" y2="160" stroke="#757575" stroke-width="3"/>
+            <line x1="180" y1="100" x2="190" y2="160" stroke="#757575" stroke-width="3"/>
+            <line x1="70" y1="100" x2="80" y2="160" stroke="#757575" stroke-width="3"/>
+            <line x1="170" y1="100" x2="160" y2="160" stroke="#757575" stroke-width="3"/>
+            <rect x="40" y="85" width="170" height="5" rx="2" fill="#B39DDB"/>
+            <rect x="100" y="70" width="40" height="15" rx="3" fill="#CE93D8" opacity="0.5"/>
+          </svg>
+          <div class="absolute top-3 left-3 badge badge-secondary text-white font-bold">Ergonômica</div>
+        </figure>
+        <div class="card-body">
+          <h3 class="card-title text-xl font-bold">Tábua de Passar</h3>
+          <p class="text-pm-gray text-sm">Altura regulável e pés antiderrapantes. Capa em algodão com espuma para melhor deslizamento do ferro.</p>
+          <div class="flex flex-wrap gap-2 mt-2">
+            <div class="badge badge-outline badge-sm">Regulável</div>
+            <div class="badge badge-outline badge-sm">Antiderrapante</div>
+          </div>
+          <div class="card-actions justify-end mt-4">
+            <button class="btn bg-pm-red text-white border-none hover:bg-red-700">Detalhes</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cesto de Roupas -->
+      <div class="card bg-base-100 shadow-xl product-card">
+        <figure class="h-64 bg-gradient-to-br from-teal-50 to-blue-50 flex items-center justify-center relative">
+          <svg viewBox="0 0 250 200" class="h-44">
+            <rect x="70" y="40" width="110" height="130" rx="10" fill="#80CBC4"/>
+            <rect x="65" y="30" width="120" height="18" rx="5" fill="#4DB6AC"/>
+            <rect x="90" y="14" width="70" height="20" rx="10" fill="none" stroke="#26A69A" stroke-width="3"/>
+            <line x1="70" y1="80" x2="180" y2="80" stroke="#4DB6AC" stroke-width="1" opacity="0.5"/>
+            <line x1="70" y1="110" x2="180" y2="110" stroke="#4DB6AC" stroke-width="1" opacity="0.5"/>
+            <line x1="70" y1="140" x2="180" y2="140" stroke="#4DB6AC" stroke-width="1" opacity="0.5"/>
+            <rect x="85" y="35" width="20" height="25" rx="3" fill="#E0F2F1" opacity="0.6"/>
+            <rect x="115" y="30" width="15" height="30" rx="3" fill="#B2DFDB" opacity="0.5"/>
+          </svg>
+          <div class="absolute top-3 left-3 badge badge-accent text-white font-bold">Organizador</div>
+        </figure>
+        <div class="card-body">
+          <h3 class="card-title text-xl font-bold">Cesto de Roupas</h3>
+          <p class="text-pm-gray text-sm">Cesto com tampa e alças ergonômicas. Material ventilado para evitar mofo e mau cheiro.</p>
+          <div class="flex flex-wrap gap-2 mt-2">
+            <div class="badge badge-outline badge-sm">Ventilado</div>
+            <div class="badge badge-outline badge-sm">Ergonômico</div>
+          </div>
+          <div class="card-actions justify-end mt-4">
+            <button class="btn bg-pm-red text-white border-none hover:bg-red-700">Detalhes</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Organizador de Lavanderia -->
+      <div class="card bg-base-100 shadow-xl product-card">
+        <figure class="h-64 bg-gradient-to-br from-indigo-50 to-blue-50 flex items-center justify-center relative">
+          <svg viewBox="0 0 250 200" class="h-44">
+            <rect x="60" y="30" width="130" height="150" rx="5" fill="#C5CAE9"/>
+            <rect x="70" y="40" width="110" height="40" rx="3" fill="#E8EAF6"/>
+            <rect x="70" y="90" width="110" height="40" rx="3" fill="#E8EAF6"/>
+            <rect x="70" y="140" width="110" height="30" rx="3" fill="#E8EAF6"/>
+            <line x1="125" y1="40" x2="125" y2="80" stroke="#9FA8DA" stroke-width="1"/>
+            <line x1="125" y1="90" x2="125" y2="130" stroke="#9FA8DA" stroke-width="1"/>
+            <circle cx="125" cy="55" r="4" fill="#7986CB"/>
+            <circle cx="125" cy="105" r="4" fill="#7986CB"/>
+            <circle cx="125" cy="152" r="4" fill="#7986CB"/>
+          </svg>
+        </figure>
+        <div class="card-body">
+          <h3 class="card-title text-xl font-bold">Organizador Multiuso</h3>
+          <p class="text-pm-gray text-sm">Gavetas organizadoras empilháveis para produtos de lavanderia. Maximiza o espaço disponível.</p>
+          <div class="flex flex-wrap gap-2 mt-2">
+            <div class="badge badge-outline badge-sm">Empilhável</div>
+            <div class="badge badge-outline badge-sm">Multiuso</div>
+          </div>
+          <div class="card-actions justify-end mt-4">
+            <button class="btn bg-pm-red text-white border-none hover:bg-red-700">Detalhes</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cabides -->
+      <div class="card bg-base-100 shadow-xl product-card">
+        <figure class="h-64 bg-gradient-to-br from-pink-50 to-blue-50 flex items-center justify-center relative">
+          <svg viewBox="0 0 250 200" class="h-44">
+            <path d="M125 40 L125 55 Q125 65 115 70 L60 100 Q50 105 55 115 L55 118 Q55 125 62 125 L188 125 Q195 125 195 118 L195 115 Q200 105 190 100 L135 70 Q125 65 125 55" fill="none" stroke="#EC407A" stroke-width="4"/>
+            <circle cx="125" cy="35" r="8" fill="none" stroke="#EC407A" stroke-width="3"/>
+            <path d="M85 40 L85 55 Q85 65 75 70 L30 100 Q20 105 25 115 L25 118 Q25 125 32 125 L158 125 Q165 125 165 118 L165 115 Q170 105 160 100 L105 70 Q95 65 95 55 L95 40" fill="none" stroke="#F48FB1" stroke-width="3" opacity="0.5" transform="translate(25,45) scale(0.8)"/>
+          </svg>
+          <div class="absolute top-3 left-3 badge badge-error text-white font-bold">Kit</div>
+        </figure>
+        <div class="card-body">
+          <h3 class="card-title text-xl font-bold">Kit Cabides</h3>
+          <p class="text-pm-gray text-sm">Cabides antideslizantes em veludo. Kit com múltiplas unidades para organização completa do guarda-roupas.</p>
+          <div class="flex flex-wrap gap-2 mt-2">
+            <div class="badge badge-outline badge-sm">Veludo</div>
+            <div class="badge badge-outline badge-sm">Antideslizante</div>
+          </div>
+          <div class="card-actions justify-end mt-4">
+            <button class="btn bg-pm-red text-white border-none hover:bg-red-700">Detalhes</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Secador de Roupas -->
+      <div class="card bg-base-100 shadow-xl product-card">
+        <figure class="h-64 bg-gradient-to-br from-amber-50 to-blue-50 flex items-center justify-center relative">
+          <svg viewBox="0 0 250 200" class="h-44">
+            <rect x="60" y="30" width="130" height="8" rx="2" fill="#FFA726"/>
+            <line x1="80" y1="38" x2="80" y2="170" stroke="#FFB74D" stroke-width="3"/>
+            <line x1="170" y1="38" x2="170" y2="170" stroke="#FFB74D" stroke-width="3"/>
+            <line x1="80" y1="60" x2="170" y2="60" stroke="#FFE0B2" stroke-width="2"/>
+            <line x1="80" y1="85" x2="170" y2="85" stroke="#FFE0B2" stroke-width="2"/>
+            <line x1="80" y1="110" x2="170" y2="110" stroke="#FFE0B2" stroke-width="2"/>
+            <line x1="80" y1="135" x2="170" y2="135" stroke="#FFE0B2" stroke-width="2"/>
+            <rect x="95" y="50" width="12" height="25" rx="2" fill="#FFECB3" opacity="0.7"/>
+            <rect x="120" y="48" width="10" height="30" rx="2" fill="#FFF3E0" opacity="0.7"/>
+            <rect x="145" y="52" width="14" height="22" rx="2" fill="#FFECB3" opacity="0.7"/>
+            <rect x="75" y="168" width="10" height="20" rx="2" fill="#F57F17" opacity="0.5"/>
+            <rect x="165" y="168" width="10" height="20" rx="2" fill="#F57F17" opacity="0.5"/>
+          </svg>
+          <div class="absolute top-3 left-3 badge badge-warning text-white font-bold">Portátil</div>
+        </figure>
+        <div class="card-body">
+          <h3 class="card-title text-xl font-bold">Varal de Chão</h3>
+          <p class="text-pm-gray text-sm">Varal de chão dobrável com hastes em aço. Compacto para guardar e amplo para secar roupas.</p>
+          <div class="flex flex-wrap gap-2 mt-2">
+            <div class="badge badge-outline badge-sm">Dobrável</div>
+            <div class="badge badge-outline badge-sm">Aço</div>
+          </div>
+          <div class="card-actions justify-end mt-4">
+            <button class="btn bg-pm-red text-white border-none hover:bg-red-700">Detalhes</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Tips Section -->
+  <section class="bg-base-200 py-16 px-4">
+    <div class="max-w-5xl mx-auto text-center">
+      <h2 class="text-3xl font-black text-pm-dark mb-10">Dicas para sua Lavanderia</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="card bg-base-100 shadow-md">
+          <div class="card-body items-center text-center">
+            <div class="text-4xl mb-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+            </div>
+            <h3 class="font-bold">Organize por Tipo</h3>
+            <p class="text-sm text-pm-gray">Separe roupas claras, escuras e delicadas antes de lavar para melhores resultados.</p>
+          </div>
+        </div>
+        <div class="card bg-base-100 shadow-md">
+          <div class="card-body items-center text-center">
+            <div class="text-4xl mb-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+            </div>
+            <h3 class="font-bold">Seque ao Natural</h3>
+            <p class="text-sm text-pm-gray">Aproveite a luz solar para secar roupas naturalmente e economizar energia.</p>
+          </div>
+        </div>
+        <div class="card bg-base-100 shadow-md">
+          <div class="card-body items-center text-center">
+            <div class="text-4xl mb-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"/></svg>
+            </div>
+            <h3 class="font-bold">Maximize Espaço</h3>
+            <p class="text-sm text-pm-gray">Use organizadores verticais e varais retráteis para aproveitar cada centímetro.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-pm-dark text-white pt-12 pb-8 px-4">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-8 border-b border-white/10">
+        <div>
+          <h3 class="text-2xl font-black mb-4"><span class="text-pm-red">POWER</span>MAID</h3>
+          <p class="text-white/60 text-sm">Inovadora, Moderna, Funcional. Nascida dentro do Grupo Camesa.</p>
+        </div>
+        <div>
+          <h4 class="font-bold text-lg mb-4">Produtos</h4>
+          <ul class="space-y-2 text-white/60">
+            <li><a href="mops.html" class="hover:text-pm-red transition-colors">Mops de Limpeza</a></li>
+            <li><a href="lixeiras.html" class="hover:text-pm-red transition-colors">Lixeiras</a></li>
+            <li><a href="lavanderia.html" class="hover:text-pm-red transition-colors">Lavanderia</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-lg mb-4">Institucional</h4>
+          <ul class="space-y-2 text-white/60">
+            <li><a href="sobre.html" class="hover:text-pm-red transition-colors">Quem Somos</a></li>
+            <li><a href="blog.html" class="hover:text-pm-red transition-colors">Blog</a></li>
+            <li><a href="contato.html" class="hover:text-pm-red transition-colors">Contato</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-lg mb-4">Contato</h4>
+          <ul class="space-y-2 text-white/60 text-sm">
+            <li>contato@powermaid.com.br</li>
+            <li>(11) 4002-8922</li>
+            <li>São Paulo, SP - Brasil</li>
+          </ul>
+        </div>
+      </div>
+      <div class="text-center pt-6 text-white/40 text-sm">
+        <p>&copy; 2026 Powermaid - Grupo Camesa. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

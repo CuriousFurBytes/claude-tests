@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>POWERMAID | Inovadora, Moderna, Funcional</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/custom.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'pm-red': '#E53935',
+            'pm-dark': '#1a1a2e',
+            'pm-gray': '#4a4a5a',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-base-100">
+
+  <!-- Navbar -->
+  <div class="navbar bg-base-100 shadow-lg sticky top-0 z-50 px-4 lg:px-8">
+    <div class="navbar-start">
+      <div class="dropdown">
+        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16"/>
+          </svg>
+        </div>
+        <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+          <li><a href="index.html" class="font-semibold">Home</a></li>
+          <li><a href="mops.html">Mops</a></li>
+          <li><a href="lixeiras.html">Lixeiras</a></li>
+          <li><a href="lavanderia.html">Lavanderia</a></li>
+          <li><a href="sobre.html">Quem Somos</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </div>
+      <a href="index.html" class="btn btn-ghost text-xl font-black tracking-tight">
+        <span class="text-pm-red">POWER</span><span class="text-pm-dark">MAID</span>
+      </a>
+    </div>
+    <div class="navbar-center hidden lg:flex">
+      <ul class="menu menu-horizontal px-1 gap-1">
+        <li><a href="index.html" class="font-semibold nav-active">Home</a></li>
+        <li><a href="mops.html" class="font-medium hover:text-pm-red">Mops</a></li>
+        <li><a href="lixeiras.html" class="font-medium hover:text-pm-red">Lixeiras</a></li>
+        <li><a href="lavanderia.html" class="font-medium hover:text-pm-red">Lavanderia</a></li>
+        <li><a href="sobre.html" class="font-medium hover:text-pm-red">Quem Somos</a></li>
+        <li><a href="blog.html" class="font-medium hover:text-pm-red">Blog</a></li>
+        <li><a href="contato.html" class="font-medium hover:text-pm-red">Contato</a></li>
+      </ul>
+    </div>
+    <div class="navbar-end">
+      <a href="contato.html" class="btn btn-sm bg-pm-red text-white border-none hover:bg-red-700">Fale Conosco</a>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero min-h-[85vh] hero-gradient relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+      <svg viewBox="0 0 1440 800" class="w-full h-full">
+        <circle cx="200" cy="200" r="300" fill="white" opacity="0.1"/>
+        <circle cx="1200" cy="600" r="250" fill="white" opacity="0.08"/>
+        <circle cx="700" cy="100" r="150" fill="white" opacity="0.05"/>
+      </svg>
+    </div>
+    <div class="hero-content text-center text-white flex-col lg:flex-row-reverse gap-12 max-w-7xl">
+      <div class="lg:w-1/2">
+        <svg viewBox="0 0 500 400" class="w-full max-w-lg mx-auto drop-shadow-2xl">
+          <rect x="50" y="50" width="400" height="300" rx="20" fill="white" opacity="0.15"/>
+          <rect x="120" y="100" width="120" height="180" rx="10" fill="white" opacity="0.25"/>
+          <rect x="260" y="120" width="120" height="160" rx="10" fill="white" opacity="0.2"/>
+          <circle cx="180" cy="160" r="30" fill="#E53935" opacity="0.8"/>
+          <circle cx="320" cy="170" r="25" fill="#FF7043" opacity="0.7"/>
+          <rect x="155" y="200" width="50" height="60" rx="5" fill="white" opacity="0.3"/>
+          <rect x="295" y="210" width="50" height="50" rx="5" fill="white" opacity="0.3"/>
+          <text x="250" y="380" text-anchor="middle" fill="white" font-size="14" opacity="0.6">Produtos de Limpeza</text>
+        </svg>
+      </div>
+      <div class="lg:w-1/2 text-left">
+        <div class="badge badge-outline badge-lg text-white border-white/50 mb-4">Grupo Camesa - 40+ anos</div>
+        <h1 class="text-5xl lg:text-6xl font-black leading-tight">
+          Inovadora.<br>
+          <span class="text-red-300">Moderna.</span><br>
+          Funcional.
+        </h1>
+        <p class="py-6 text-lg text-white/80 max-w-md">
+          Revolucionando o dia a dia dos consumidores com produtos que tornam as tarefas do lar muito mais práticas e prazerosas.
+        </p>
+        <div class="flex gap-4 flex-wrap">
+          <a href="mops.html" class="btn btn-lg bg-white text-pm-red border-none hover:bg-gray-100 font-bold">
+            Ver Produtos
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+            </svg>
+          </a>
+          <a href="sobre.html" class="btn btn-lg btn-outline text-white border-white/50 hover:bg-white/10 hover:border-white">Saiba Mais</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Bar -->
+  <section class="bg-pm-dark py-8">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="stats stats-vertical lg:stats-horizontal w-full bg-transparent text-white">
+        <div class="stat place-items-center stat-item">
+          <div class="stat-value text-pm-red text-4xl font-black">40+</div>
+          <div class="stat-desc text-white/70 text-base mt-1">Anos de História</div>
+        </div>
+        <div class="stat place-items-center stat-item">
+          <div class="stat-value text-pm-red text-4xl font-black">50+</div>
+          <div class="stat-desc text-white/70 text-base mt-1">Produtos na Linha</div>
+        </div>
+        <div class="stat place-items-center stat-item">
+          <div class="stat-value text-pm-red text-4xl font-black">1000+</div>
+          <div class="stat-desc text-white/70 text-base mt-1">Pontos de Venda</div>
+        </div>
+        <div class="stat place-items-center stat-item">
+          <div class="stat-value text-pm-red text-4xl font-black">5★</div>
+          <div class="stat-desc text-white/70 text-base mt-1">Avaliação Clientes</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Categories -->
+  <section class="py-20 px-4 max-w-7xl mx-auto">
+    <div class="text-center mb-16">
+      <div class="badge badge-error badge-outline mb-4">Nossas Linhas</div>
+      <h2 class="text-4xl font-black text-pm-dark">Linha Completa para Seu Lar</h2>
+      <p class="text-pm-gray mt-4 max-w-2xl mx-auto">Tecnologia e cuidado em cada produto. Uma linha completa que facilita a limpeza com um modelo para cada tarefa.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Mops -->
+      <a href="mops.html" class="card bg-base-100 shadow-xl category-card overflow-hidden group">
+        <figure class="h-64 bg-gradient-to-br from-red-50 to-red-100 relative overflow-hidden">
+          <svg viewBox="0 0 300 250" class="w-48 h-48 group-hover:scale-110 transition-transform duration-500">
+            <rect x="140" y="20" width="20" height="180" rx="4" fill="#E53935"/>
+            <ellipse cx="150" cy="210" rx="60" ry="25" fill="#B71C1C" opacity="0.8"/>
+            <rect x="90" y="195" width="120" height="30" rx="5" fill="#EF5350"/>
+            <circle cx="150" cy="60" r="15" fill="#FF8A80" opacity="0.6"/>
+          </svg>
+          <div class="absolute top-4 right-4 badge badge-error text-white">Popular</div>
+        </figure>
+        <div class="card-body">
+          <h3 class="card-title text-2xl font-bold">Mops de Limpeza</h3>
+          <p class="text-pm-gray">A linha mais completa e moderna de mops, mop spray e mop lava e seca.</p>
+          <div class="card-actions justify-end mt-2">
+            <span class="text-pm-red font-bold flex items-center gap-1">
+              Ver produtos →
+            </span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Lixeiras -->
+      <a href="lixeiras.html" class="card bg-base-100 shadow-xl category-card overflow-hidden group">
+        <figure class="h-64 bg-gradient-to-br from-gray-50 to-gray-100 relative overflow-hidden">
+          <svg viewBox="0 0 300 250" class="w-48 h-48 group-hover:scale-110 transition-transform duration-500">
+            <rect x="90" y="70" width="120" height="150" rx="8" fill="#78909C"/>
+            <rect x="85" y="60" width="130" height="20" rx="5" fill="#607D8B"/>
+            <rect x="115" y="40" width="70" height="25" rx="12" fill="#90A4AE" stroke="#607D8B" stroke-width="3" fill="none"/>
+            <circle cx="150" cy="145" r="20" fill="#B0BEC5" opacity="0.5"/>
+          </svg>
+          <div class="absolute top-4 right-4 badge badge-neutral text-white">Inox</div>
+        </figure>
+        <div class="card-body">
+          <h3 class="card-title text-2xl font-bold">Lixeiras</h3>
+          <p class="text-pm-gray">Lixeiras em inox com design moderno, anti-fingerprint e balde interno removível.</p>
+          <div class="card-actions justify-end mt-2">
+            <span class="text-pm-red font-bold flex items-center gap-1">
+              Ver produtos →
+            </span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Lavanderia -->
+      <a href="lavanderia.html" class="card bg-base-100 shadow-xl category-card overflow-hidden group">
+        <figure class="h-64 bg-gradient-to-br from-blue-50 to-blue-100 relative overflow-hidden">
+          <svg viewBox="0 0 300 250" class="w-48 h-48 group-hover:scale-110 transition-transform duration-500">
+            <rect x="80" y="50" width="140" height="170" rx="10" fill="#42A5F5"/>
+            <circle cx="150" cy="150" r="50" fill="#E3F2FD" stroke="#1E88E5" stroke-width="3"/>
+            <circle cx="150" cy="150" r="30" fill="#BBDEFB"/>
+            <rect x="95" y="65" width="110" height="30" rx="5" fill="#1E88E5"/>
+            <circle cx="120" cy="80" r="6" fill="#E3F2FD"/>
+            <circle cx="140" cy="80" r="6" fill="#E3F2FD"/>
+          </svg>
+          <div class="absolute top-4 right-4 badge badge-info text-white">Novo</div>
+        </figure>
+        <div class="card-body">
+          <h3 class="card-title text-2xl font-bold">Lavanderia</h3>
+          <p class="text-pm-gray">Soluções práticas e funcionais para organizar e otimizar sua lavanderia.</p>
+          <div class="card-actions justify-end mt-2">
+            <span class="text-pm-red font-bold flex items-center gap-1">
+              Ver produtos →
+            </span>
+          </div>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="bg-base-200 py-20 px-4">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <div class="badge badge-error badge-outline mb-4">Por que Powermaid?</div>
+        <h2 class="text-4xl font-black text-pm-dark">Qualidade em Cada Detalhe</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="card bg-base-100 shadow-md hover:shadow-xl transition-shadow">
+          <div class="card-body items-center text-center">
+            <div class="w-16 h-16 rounded-full bg-red-100 flex items-center justify-center mb-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-pm-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+              </svg>
+            </div>
+            <h3 class="card-title text-lg">Inovação</h3>
+            <p class="text-sm text-pm-gray">Tecnologia de ponta aplicada em cada produto para máxima eficiência.</p>
+          </div>
+        </div>
+
+        <div class="card bg-base-100 shadow-md hover:shadow-xl transition-shadow">
+          <div class="card-body items-center text-center">
+            <div class="w-16 h-16 rounded-full bg-red-100 flex items-center justify-center mb-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-pm-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+              </svg>
+            </div>
+            <h3 class="card-title text-lg">Qualidade</h3>
+            <p class="text-sm text-pm-gray">Materiais premium e acabamento impecável com garantia de durabilidade.</p>
+          </div>
+        </div>
+
+        <div class="card bg-base-100 shadow-md hover:shadow-xl transition-shadow">
+          <div class="card-body items-center text-center">
+            <div class="w-16 h-16 rounded-full bg-red-100 flex items-center justify-center mb-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-pm-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/>
+              </svg>
+            </div>
+            <h3 class="card-title text-lg">Design</h3>
+            <p class="text-sm text-pm-gray">Visual moderno que combina com qualquer ambiente da sua casa.</p>
+          </div>
+        </div>
+
+        <div class="card bg-base-100 shadow-md hover:shadow-xl transition-shadow">
+          <div class="card-body items-center text-center">
+            <div class="w-16 h-16 rounded-full bg-red-100 flex items-center justify-center mb-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-pm-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+              </svg>
+            </div>
+            <h3 class="card-title text-lg">Praticidade</h3>
+            <p class="text-sm text-pm-gray">Produtos pensados para facilitar as tarefas do dia a dia.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Products -->
+  <section class="py-20 px-4 max-w-7xl mx-auto">
+    <div class="text-center mb-16">
+      <div class="badge badge-error badge-outline mb-4">Destaques</div>
+      <h2 class="text-4xl font-black text-pm-dark">Produtos em Destaque</h2>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- Product 1 -->
+      <div class="card bg-base-100 shadow-lg product-card">
+        <figure class="h-52 bg-gradient-to-br from-red-50 to-orange-50 flex items-center justify-center p-4">
+          <svg viewBox="0 0 200 180" class="h-40">
+            <rect x="90" y="10" width="16" height="130" rx="3" fill="#E53935"/>
+            <ellipse cx="98" cy="150" rx="45" ry="18" fill="#EF5350" opacity="0.8"/>
+            <rect x="53" y="138" width="90" height="22" rx="4" fill="#F44336"/>
+            <circle cx="98" cy="40" r="10" fill="#FF8A80"/>
+          </svg>
+        </figure>
+        <div class="card-body p-4">
+          <div class="badge badge-sm badge-error badge-outline">Mop</div>
+          <h3 class="font-bold text-lg mt-1">Mop Giratório Pro</h3>
+          <p class="text-sm text-pm-gray">Centrífuga inox, 13L, dispenser para sanitizantes</p>
+          <a href="mops.html" class="btn btn-sm bg-pm-red text-white border-none hover:bg-red-700 mt-2">Saiba Mais</a>
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="card bg-base-100 shadow-lg product-card">
+        <figure class="h-52 bg-gradient-to-br from-red-50 to-yellow-50 flex items-center justify-center p-4">
+          <svg viewBox="0 0 200 180" class="h-40">
+            <rect x="85" y="5" width="14" height="100" rx="3" fill="#E53935"/>
+            <rect x="70" y="105" width="60" height="12" rx="3" fill="#EF5350"/>
+            <rect x="75" y="117" width="50" height="45" rx="4" fill="#FFCDD2"/>
+            <rect x="92" y="50" width="16" height="20" rx="2" fill="#FF8A80" opacity="0.6"/>
+          </svg>
+        </figure>
+        <div class="card-body p-4">
+          <div class="badge badge-sm badge-error badge-outline">Mop</div>
+          <h3 class="font-bold text-lg mt-1">Mop Spray</h3>
+          <p class="text-sm text-pm-gray">Reservatório integrado, refil em microfibra lavável</p>
+          <a href="mops.html" class="btn btn-sm bg-pm-red text-white border-none hover:bg-red-700 mt-2">Saiba Mais</a>
+        </div>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="card bg-base-100 shadow-lg product-card">
+        <figure class="h-52 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center p-4">
+          <svg viewBox="0 0 200 180" class="h-40">
+            <rect x="55" y="50" width="90" height="110" rx="6" fill="#90A4AE"/>
+            <rect x="50" y="40" width="100" height="16" rx="4" fill="#78909C"/>
+            <rect x="75" y="25" width="50" height="20" rx="10" fill="none" stroke="#607D8B" stroke-width="3"/>
+            <circle cx="100" cy="105" r="15" fill="#B0BEC5" opacity="0.5"/>
+          </svg>
+        </figure>
+        <div class="card-body p-4">
+          <div class="badge badge-sm badge-neutral badge-outline">Lixeira</div>
+          <h3 class="font-bold text-lg mt-1">Lixeira Inox 12L</h3>
+          <p class="text-sm text-pm-gray">Aço inox, pedal, balde interno removível</p>
+          <a href="lixeiras.html" class="btn btn-sm bg-pm-red text-white border-none hover:bg-red-700 mt-2">Saiba Mais</a>
+        </div>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="card bg-base-100 shadow-lg product-card">
+        <figure class="h-52 bg-gradient-to-br from-blue-50 to-cyan-50 flex items-center justify-center p-4">
+          <svg viewBox="0 0 200 180" class="h-40">
+            <rect x="40" y="30" width="120" height="130" rx="8" fill="#64B5F6"/>
+            <circle cx="100" cy="105" r="40" fill="#E3F2FD" stroke="#2196F3" stroke-width="2"/>
+            <circle cx="100" cy="105" r="25" fill="#BBDEFB"/>
+            <rect x="55" y="40" width="90" height="25" rx="4" fill="#1E88E5"/>
+            <circle cx="75" cy="52" r="5" fill="#E3F2FD"/>
+            <circle cx="90" cy="52" r="5" fill="#E3F2FD"/>
+          </svg>
+        </figure>
+        <div class="card-body p-4">
+          <div class="badge badge-sm badge-info badge-outline">Lavanderia</div>
+          <h3 class="font-bold text-lg mt-1">Varal Retrátil</h3>
+          <p class="text-sm text-pm-gray">Prático, resistente e ideal para espaços pequenos</p>
+          <a href="lavanderia.html" class="btn btn-sm bg-pm-red text-white border-none hover:bg-red-700 mt-2">Saiba Mais</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="bg-pm-red py-16 px-4">
+    <div class="max-w-4xl mx-auto text-center text-white">
+      <h2 class="text-4xl font-black mb-4">Transforme a Limpeza do Seu Lar</h2>
+      <p class="text-lg text-white/80 mb-8 max-w-2xl mx-auto">
+        Descubra como os produtos Powermaid podem tornar suas tarefas domésticas mais rápidas, fáceis e até prazerosas.
+      </p>
+      <div class="flex gap-4 justify-center flex-wrap">
+        <a href="contato.html" class="btn btn-lg bg-white text-pm-red border-none hover:bg-gray-100 font-bold">Entre em Contato</a>
+        <a href="sobre.html" class="btn btn-lg btn-outline text-white border-white hover:bg-white/10">Nossa História</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="py-20 px-4 max-w-7xl mx-auto">
+    <div class="text-center mb-16">
+      <div class="badge badge-error badge-outline mb-4">Depoimentos</div>
+      <h2 class="text-4xl font-black text-pm-dark">O que Nossos Clientes Dizem</h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="card bg-base-100 shadow-md">
+        <div class="card-body">
+          <div class="flex gap-1 text-yellow-400 mb-2">★★★★★</div>
+          <p class="text-pm-gray italic">"O Mop Giratório Pro mudou completamente a forma como eu limpo minha casa. Super prático e durável!"</p>
+          <div class="flex items-center gap-3 mt-4">
+            <div class="avatar placeholder">
+              <div class="bg-pm-red text-white rounded-full w-10">
+                <span class="text-sm">MA</span>
+              </div>
+            </div>
+            <div>
+              <p class="font-bold text-sm">Maria Aparecida</p>
+              <p class="text-xs text-pm-gray">São Paulo, SP</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card bg-base-100 shadow-md">
+        <div class="card-body">
+          <div class="flex gap-1 text-yellow-400 mb-2">★★★★★</div>
+          <p class="text-pm-gray italic">"As lixeiras em inox são lindas e super funcionais. O revestimento anti-fingerprint é incrível!"</p>
+          <div class="flex items-center gap-3 mt-4">
+            <div class="avatar placeholder">
+              <div class="bg-pm-dark text-white rounded-full w-10">
+                <span class="text-sm">CS</span>
+              </div>
+            </div>
+            <div>
+              <p class="font-bold text-sm">Carlos Silva</p>
+              <p class="text-xs text-pm-gray">Rio de Janeiro, RJ</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card bg-base-100 shadow-md">
+        <div class="card-body">
+          <div class="flex gap-1 text-yellow-400 mb-2">★★★★★</div>
+          <p class="text-pm-gray italic">"Produtos de qualidade excepcional. Uso o Mop Spray todos os dias e o refil é super fácil de lavar."</p>
+          <div class="flex items-center gap-3 mt-4">
+            <div class="avatar placeholder">
+              <div class="bg-red-300 text-white rounded-full w-10">
+                <span class="text-sm">AF</span>
+              </div>
+            </div>
+            <div>
+              <p class="font-bold text-sm">Ana Ferreira</p>
+              <p class="text-xs text-pm-gray">Belo Horizonte, MG</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer-wave bg-pm-dark text-white pt-16 pb-8 px-4">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-8 border-b border-white/10">
+        <div>
+          <h3 class="text-2xl font-black mb-4"><span class="text-pm-red">POWER</span>MAID</h3>
+          <p class="text-white/60 text-sm">Inovadora, Moderna, Funcional. Nascida dentro do Grupo Camesa, com mais de 40 anos de história.</p>
+        </div>
+        <div>
+          <h4 class="font-bold text-lg mb-4">Produtos</h4>
+          <ul class="space-y-2 text-white/60">
+            <li><a href="mops.html" class="hover:text-pm-red transition-colors">Mops de Limpeza</a></li>
+            <li><a href="lixeiras.html" class="hover:text-pm-red transition-colors">Lixeiras</a></li>
+            <li><a href="lavanderia.html" class="hover:text-pm-red transition-colors">Lavanderia</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-lg mb-4">Institucional</h4>
+          <ul class="space-y-2 text-white/60">
+            <li><a href="sobre.html" class="hover:text-pm-red transition-colors">Quem Somos</a></li>
+            <li><a href="blog.html" class="hover:text-pm-red transition-colors">Blog</a></li>
+            <li><a href="contato.html" class="hover:text-pm-red transition-colors">Contato</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-lg mb-4">Contato</h4>
+          <ul class="space-y-2 text-white/60 text-sm">
+            <li>contato@powermaid.com.br</li>
+            <li>(11) 4002-8922</li>
+            <li>São Paulo, SP - Brasil</li>
+          </ul>
+          <div class="flex gap-3 mt-4">
+            <a href="#" class="btn btn-circle btn-sm btn-ghost text-white hover:text-pm-red">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
+            </a>
+            <a href="#" class="btn btn-circle btn-sm btn-ghost text-white hover:text-pm-red">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="#" class="btn btn-circle btn-sm btn-ghost text-white hover:text-pm-red">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="text-center pt-6 text-white/40 text-sm">
+        <p>&copy; 2026 Powermaid - Grupo Camesa. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

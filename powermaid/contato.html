@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato | POWERMAID</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/custom.css">
+  <script>
+    tailwind.config = {
+      theme: { extend: { colors: { 'pm-red': '#E53935', 'pm-dark': '#1a1a2e', 'pm-gray': '#4a4a5a' } } }
+    }
+  </script>
+</head>
+<body class="bg-base-100">
+
+  <!-- Navbar -->
+  <div class="navbar bg-base-100 shadow-lg sticky top-0 z-50 px-4 lg:px-8">
+    <div class="navbar-start">
+      <div class="dropdown">
+        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16"/></svg>
+        </div>
+        <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="mops.html">Mops</a></li>
+          <li><a href="lixeiras.html">Lixeiras</a></li>
+          <li><a href="lavanderia.html">Lavanderia</a></li>
+          <li><a href="sobre.html">Quem Somos</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contato.html" class="font-semibold">Contato</a></li>
+        </ul>
+      </div>
+      <a href="index.html" class="btn btn-ghost text-xl font-black tracking-tight">
+        <span class="text-pm-red">POWER</span><span class="text-pm-dark">MAID</span>
+      </a>
+    </div>
+    <div class="navbar-center hidden lg:flex">
+      <ul class="menu menu-horizontal px-1 gap-1">
+        <li><a href="index.html" class="font-medium hover:text-pm-red">Home</a></li>
+        <li><a href="mops.html" class="font-medium hover:text-pm-red">Mops</a></li>
+        <li><a href="lixeiras.html" class="font-medium hover:text-pm-red">Lixeiras</a></li>
+        <li><a href="lavanderia.html" class="font-medium hover:text-pm-red">Lavanderia</a></li>
+        <li><a href="sobre.html" class="font-medium hover:text-pm-red">Quem Somos</a></li>
+        <li><a href="blog.html" class="font-medium hover:text-pm-red">Blog</a></li>
+        <li><a href="contato.html" class="font-semibold nav-active">Contato</a></li>
+      </ul>
+    </div>
+    <div class="navbar-end">
+      <a href="contato.html" class="btn btn-sm bg-pm-red text-white border-none hover:bg-red-700">Fale Conosco</a>
+    </div>
+  </div>
+
+  <!-- Page Header -->
+  <section class="hero-gradient py-16 px-4">
+    <div class="max-w-7xl mx-auto">
+      <div class="breadcrumbs text-sm text-white/60 mb-4">
+        <ul>
+          <li><a href="index.html" class="text-white/60 hover:text-white">Home</a></li>
+          <li class="text-white">Contato</li>
+        </ul>
+      </div>
+      <h1 class="text-5xl font-black text-white">Fale Conosco</h1>
+      <p class="text-white/80 mt-4 max-w-2xl text-lg">Estamos prontos para atender você. Entre em contato conosco por qualquer um dos canais abaixo.</p>
+    </div>
+  </section>
+
+  <!-- Contact Info Cards -->
+  <section class="py-12 px-4 max-w-7xl mx-auto -mt-8">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="card bg-base-100 shadow-xl">
+        <div class="card-body items-center text-center">
+          <div class="w-16 h-16 rounded-full bg-red-100 flex items-center justify-center mb-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-pm-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+            </svg>
+          </div>
+          <h3 class="font-bold text-lg">Telefone</h3>
+          <p class="text-pm-red font-bold text-xl">(11) 4002-8922</p>
+          <p class="text-pm-gray text-sm">Seg a Sex: 8h - 18h</p>
+        </div>
+      </div>
+
+      <div class="card bg-base-100 shadow-xl">
+        <div class="card-body items-center text-center">
+          <div class="w-16 h-16 rounded-full bg-red-100 flex items-center justify-center mb-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-pm-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+          </div>
+          <h3 class="font-bold text-lg">E-mail</h3>
+          <p class="text-pm-red font-bold">contato@powermaid.com.br</p>
+          <p class="text-pm-gray text-sm">Respondemos em até 24h</p>
+        </div>
+      </div>
+
+      <div class="card bg-base-100 shadow-xl">
+        <div class="card-body items-center text-center">
+          <div class="w-16 h-16 rounded-full bg-red-100 flex items-center justify-center mb-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-pm-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+          </div>
+          <h3 class="font-bold text-lg">Showroom</h3>
+          <p class="text-pm-red font-bold">São Paulo, SP</p>
+          <p class="text-pm-gray text-sm">Visite nosso showroom</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form & Map -->
+  <section class="py-12 px-4 max-w-7xl mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+
+      <!-- Form -->
+      <div>
+        <h2 class="text-3xl font-black text-pm-dark mb-6">Envie sua Mensagem</h2>
+        <form class="space-y-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="form-control">
+              <label class="label">
+                <span class="label-text font-semibold">Nome *</span>
+              </label>
+              <input type="text" placeholder="Seu nome completo" class="input input-bordered w-full focus:border-pm-red"/>
+            </div>
+            <div class="form-control">
+              <label class="label">
+                <span class="label-text font-semibold">E-mail *</span>
+              </label>
+              <input type="email" placeholder="seu@email.com" class="input input-bordered w-full focus:border-pm-red"/>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="form-control">
+              <label class="label">
+                <span class="label-text font-semibold">Telefone</span>
+              </label>
+              <input type="tel" placeholder="(11) 99999-9999" class="input input-bordered w-full focus:border-pm-red"/>
+            </div>
+            <div class="form-control">
+              <label class="label">
+                <span class="label-text font-semibold">Assunto *</span>
+              </label>
+              <select class="select select-bordered w-full focus:border-pm-red">
+                <option disabled selected>Selecione um assunto</option>
+                <option>Informações sobre Produtos</option>
+                <option>Assistência Técnica</option>
+                <option>Revendas / Parceria</option>
+                <option>Elogios</option>
+                <option>Reclamações</option>
+                <option>Outros</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-control">
+            <label class="label">
+              <span class="label-text font-semibold">Mensagem *</span>
+            </label>
+            <textarea class="textarea textarea-bordered h-36 focus:border-pm-red" placeholder="Escreva sua mensagem aqui..."></textarea>
+          </div>
+
+          <div class="form-control">
+            <label class="label cursor-pointer justify-start gap-3">
+              <input type="checkbox" class="checkbox checkbox-error checkbox-sm"/>
+              <span class="label-text text-sm">Aceito receber comunicações da Powermaid por e-mail.</span>
+            </label>
+          </div>
+
+          <button type="submit" class="btn bg-pm-red text-white border-none hover:bg-red-700 btn-lg w-full sm:w-auto">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
+            </svg>
+            Enviar Mensagem
+          </button>
+        </form>
+      </div>
+
+      <!-- Map Placeholder -->
+      <div>
+        <h2 class="text-3xl font-black text-pm-dark mb-6">Nossa Localização</h2>
+        <div class="rounded-2xl overflow-hidden shadow-xl h-96 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center relative">
+          <svg viewBox="0 0 500 400" class="w-full h-full">
+            <!-- Map background -->
+            <rect width="500" height="400" fill="#E8EAF6"/>
+            <!-- Roads -->
+            <line x1="0" y1="150" x2="500" y2="150" stroke="#C5CAE9" stroke-width="8"/>
+            <line x1="0" y1="250" x2="500" y2="250" stroke="#C5CAE9" stroke-width="6"/>
+            <line x1="200" y1="0" x2="200" y2="400" stroke="#C5CAE9" stroke-width="8"/>
+            <line x1="350" y1="0" x2="350" y2="400" stroke="#C5CAE9" stroke-width="6"/>
+            <!-- Blocks -->
+            <rect x="30" y="30" width="140" height="90" rx="5" fill="#D1C4E9" opacity="0.5"/>
+            <rect x="230" y="30" width="90" height="90" rx="5" fill="#D1C4E9" opacity="0.4"/>
+            <rect x="380" y="30" width="90" height="90" rx="5" fill="#D1C4E9" opacity="0.3"/>
+            <rect x="30" y="180" width="140" height="40" rx="5" fill="#D1C4E9" opacity="0.4"/>
+            <rect x="230" y="170" width="90" height="50" rx="5" fill="#D1C4E9" opacity="0.5"/>
+            <rect x="380" y="175" width="90" height="45" rx="5" fill="#D1C4E9" opacity="0.3"/>
+            <rect x="30" y="280" width="140" height="90" rx="5" fill="#D1C4E9" opacity="0.3"/>
+            <rect x="230" y="280" width="90" height="90" rx="5" fill="#D1C4E9" opacity="0.4"/>
+            <rect x="380" y="280" width="90" height="90" rx="5" fill="#D1C4E9" opacity="0.5"/>
+            <!-- Pin -->
+            <g transform="translate(275, 155)">
+              <ellipse cx="0" cy="35" rx="15" ry="5" fill="rgba(0,0,0,0.2)"/>
+              <path d="M0-30 C-15-30 -25-18 -25-5 C-25 10 0 35 0 35 C0 35 25 10 25-5 C25-18 15-30 0-30Z" fill="#E53935"/>
+              <circle cx="0" cy="-8" r="8" fill="white"/>
+            </g>
+            <!-- Label -->
+            <rect x="210" y="90" width="130" height="35" rx="8" fill="white" filter="url(#shadow)"/>
+            <text x="275" y="113" text-anchor="middle" fill="#1a1a2e" font-size="13" font-weight="bold">Powermaid SP</text>
+          </svg>
+          <div class="absolute bottom-4 left-4 right-4">
+            <div class="alert bg-white/90 shadow-lg">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-pm-red shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+              </svg>
+              <div>
+                <h3 class="font-bold text-sm">Showroom Powermaid</h3>
+                <p class="text-xs text-pm-gray">São Paulo, SP - Brasil</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ -->
+        <div class="mt-10">
+          <h3 class="text-2xl font-black text-pm-dark mb-4">Perguntas Frequentes</h3>
+          <div class="join join-vertical w-full">
+            <div class="collapse collapse-arrow join-item border border-base-300">
+              <input type="radio" name="faq" checked="checked"/>
+              <div class="collapse-title text-lg font-bold">Onde posso comprar produtos Powermaid?</div>
+              <div class="collapse-content">
+                <p class="text-pm-gray">Nossos produtos estão disponíveis nas principais redes varejistas do Brasil, incluindo Magazine Luiza, Leroy Merlin, e diversas lojas especializadas. Consulte-nos para encontrar o ponto de venda mais próximo.</p>
+              </div>
+            </div>
+            <div class="collapse collapse-arrow join-item border border-base-300">
+              <input type="radio" name="faq"/>
+              <div class="collapse-title text-lg font-bold">Como faço para ser revendedor?</div>
+              <div class="collapse-content">
+                <p class="text-pm-gray">Entre em contato através do formulário selecionando "Revendas / Parceria" ou ligue para nosso departamento comercial. Teremos prazer em apresentar nossas condições.</p>
+              </div>
+            </div>
+            <div class="collapse collapse-arrow join-item border border-base-300">
+              <input type="radio" name="faq"/>
+              <div class="collapse-title text-lg font-bold">Os produtos possuem garantia?</div>
+              <div class="collapse-content">
+                <p class="text-pm-gray">Sim! Todos os produtos Powermaid possuem garantia contra defeitos de fabricação. O prazo varia de acordo com o produto. Consulte o manual de instruções para mais detalhes.</p>
+              </div>
+            </div>
+            <div class="collapse collapse-arrow join-item border border-base-300">
+              <input type="radio" name="faq"/>
+              <div class="collapse-title text-lg font-bold">Onde encontro refis e peças de reposição?</div>
+              <div class="collapse-content">
+                <p class="text-pm-gray">Refis e peças de reposição estão disponíveis nos mesmos pontos de venda dos produtos. Você também pode solicitar diretamente conosco através deste formulário de contato.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-pm-dark text-white pt-12 pb-8 px-4 mt-12">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-8 border-b border-white/10">
+        <div>
+          <h3 class="text-2xl font-black mb-4"><span class="text-pm-red">POWER</span>MAID</h3>
+          <p class="text-white/60 text-sm">Inovadora, Moderna, Funcional. Nascida dentro do Grupo Camesa.</p>
+        </div>
+        <div>
+          <h4 class="font-bold text-lg mb-4">Produtos</h4>
+          <ul class="space-y-2 text-white/60">
+            <li><a href="mops.html" class="hover:text-pm-red transition-colors">Mops de Limpeza</a></li>
+            <li><a href="lixeiras.html" class="hover:text-pm-red transition-colors">Lixeiras</a></li>
+            <li><a href="lavanderia.html" class="hover:text-pm-red transition-colors">Lavanderia</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-lg mb-4">Institucional</h4>
+          <ul class="space-y-2 text-white/60">
+            <li><a href="sobre.html" class="hover:text-pm-red transition-colors">Quem Somos</a></li>
+            <li><a href="blog.html" class="hover:text-pm-red transition-colors">Blog</a></li>
+            <li><a href="contato.html" class="hover:text-pm-red transition-colors">Contato</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-lg mb-4">Contato</h4>
+          <ul class="space-y-2 text-white/60 text-sm">
+            <li>contato@powermaid.com.br</li>
+            <li>(11) 4002-8922</li>
+            <li>São Paulo, SP - Brasil</li>
+          </ul>
+        </div>
+      </div>
+      <div class="text-center pt-6 text-white/40 text-sm">
+        <p>&copy; 2026 Powermaid - Grupo Camesa. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

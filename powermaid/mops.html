@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Linha Mops de Limpeza | POWERMAID</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/custom.css">
+  <script>
+    tailwind.config = {
+      theme: { extend: { colors: { 'pm-red': '#E53935', 'pm-dark': '#1a1a2e', 'pm-gray': '#4a4a5a' } } }
+    }
+  </script>
+</head>
+<body class="bg-base-100">
+
+  <!-- Navbar -->
+  <div class="navbar bg-base-100 shadow-lg sticky top-0 z-50 px-4 lg:px-8">
+    <div class="navbar-start">
+      <div class="dropdown">
+        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16"/></svg>
+        </div>
+        <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="mops.html" class="font-semibold">Mops</a></li>
+          <li><a href="lixeiras.html">Lixeiras</a></li>
+          <li><a href="lavanderia.html">Lavanderia</a></li>
+          <li><a href="sobre.html">Quem Somos</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </div>
+      <a href="index.html" class="btn btn-ghost text-xl font-black tracking-tight">
+        <span class="text-pm-red">POWER</span><span class="text-pm-dark">MAID</span>
+      </a>
+    </div>
+    <div class="navbar-center hidden lg:flex">
+      <ul class="menu menu-horizontal px-1 gap-1">
+        <li><a href="index.html" class="font-medium hover:text-pm-red">Home</a></li>
+        <li><a href="mops.html" class="font-semibold nav-active">Mops</a></li>
+        <li><a href="lixeiras.html" class="font-medium hover:text-pm-red">Lixeiras</a></li>
+        <li><a href="lavanderia.html" class="font-medium hover:text-pm-red">Lavanderia</a></li>
+        <li><a href="sobre.html" class="font-medium hover:text-pm-red">Quem Somos</a></li>
+        <li><a href="blog.html" class="font-medium hover:text-pm-red">Blog</a></li>
+        <li><a href="contato.html" class="font-medium hover:text-pm-red">Contato</a></li>
+      </ul>
+    </div>
+    <div class="navbar-end">
+      <a href="contato.html" class="btn btn-sm bg-pm-red text-white border-none hover:bg-red-700">Fale Conosco</a>
+    </div>
+  </div>
+
+  <!-- Page Header -->
+  <section class="bg-gradient-to-r from-pm-red to-red-700 py-16 px-4">
+    <div class="max-w-7xl mx-auto">
+      <div class="breadcrumbs text-sm text-white/60 mb-4">
+        <ul>
+          <li><a href="index.html" class="text-white/60 hover:text-white">Home</a></li>
+          <li class="text-white">Mops de Limpeza</li>
+        </ul>
+      </div>
+      <h1 class="text-5xl font-black text-white">Linha Mops de Limpeza</h1>
+      <p class="text-white/80 mt-4 max-w-2xl text-lg">A linha mais completa e moderna de mops do mercado. Tecnologia e praticidade para cada tipo de superfície.</p>
+    </div>
+  </section>
+
+  <!-- Filter Tabs -->
+  <section class="py-8 px-4 max-w-7xl mx-auto">
+    <div role="tablist" class="tabs tabs-boxed bg-base-200 w-fit mx-auto">
+      <a role="tab" class="tab tab-active bg-pm-red text-white">Todos</a>
+      <a role="tab" class="tab">Giratório</a>
+      <a role="tab" class="tab">Spray</a>
+      <a role="tab" class="tab">Flat</a>
+      <a role="tab" class="tab">Especiais</a>
+    </div>
+  </section>
+
+  <!-- Products Grid -->
+  <section class="pb-20 px-4 max-w-7xl mx-auto">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- Mop Giratório 3 em 1 -->
+      <div class="card bg-base-100 shadow-xl product-card">
+        <figure class="h-64 bg-gradient-to-br from-red-50 to-orange-50 flex items-center justify-center relative">
+          <svg viewBox="0 0 250 220" class="h-48">
+            <rect x="115" y="10" width="18" height="140" rx="3" fill="#E53935"/>
+            <ellipse cx="124" cy="165" rx="55" ry="22" fill="#EF5350" opacity="0.7"/>
+            <rect x="69" y="150" width="110" height="28" rx="5" fill="#F44336"/>
+            <circle cx="124" cy="50" r="12" fill="#FF8A80"/>
+            <rect x="80" y="182" width="88" height="30" rx="6" fill="#D32F2F" opacity="0.5"/>
+          </svg>
+          <div class="absolute top-3 left-3">
+            <div class="badge badge-error text-white font-bold">3 em 1</div>
+          </div>
+        </figure>
+        <div class="card-body">
+          <h3 class="card-title text-xl font-bold">Mop Giratório 3 em 1</h3>
+          <p class="text-pm-gray text-sm">Centrífuga em aço inox com compartimento removível e dispenser para sanitizantes. O mais completo da linha.</p>
+          <div class="flex flex-wrap gap-2 mt-2">
+            <div class="badge badge-outline badge-sm">Inox</div>
+            <div class="badge badge-outline badge-sm">Dispenser</div>
+            <div class="badge badge-outline badge-sm">Removível</div>
+          </div>
+          <div class="card-actions justify-between items-center mt-4">
+            <div class="text-pm-gray text-sm">Capacidade: 13L</div>
+            <button class="btn bg-pm-red text-white border-none hover:bg-red-700">Detalhes</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mop Giratório Pro -->
+      <div class="card bg-base-100 shadow-xl product-card">
+        <figure class="h-64 bg-gradient-to-br from-red-50 to-pink-50 flex items-center justify-center relative">
+          <svg viewBox="0 0 250 220" class="h-48">
+            <rect x="115" y="15" width="18" height="135" rx="3" fill="#C62828"/>
+            <ellipse cx="124" cy="160" rx="50" ry="20" fill="#E53935" opacity="0.7"/>
+            <rect x="74" y="148" width="100" height="24" rx="5" fill="#EF5350"/>
+            <circle cx="124" cy="48" r="14" fill="#FFCDD2"/>
+            <rect x="74" y="176" width="100" height="28" rx="6" fill="#B71C1C" opacity="0.4"/>
+          </svg>
+          <div class="absolute top-3 left-3">
+            <div class="badge badge-warning text-white font-bold">Pro</div>
+          </div>
+        </figure>
+        <div class="card-body">
+          <h3 class="card-title text-xl font-bold">Mop Giratório Pro</h3>
+          <p class="text-pm-gray text-sm">Alta performance com centrífuga em inox e dispenser para sanitizantes. Balde com capacidade total de 13 litros.</p>
+          <div class="flex flex-wrap gap-2 mt-2">
+            <div class="badge badge-outline badge-sm">Inox</div>
+            <div class="badge badge-outline badge-sm">13 Litros</div>
+            <div class="badge badge-outline badge-sm">Pro</div>
+          </div>
+          <div class="card-actions justify-between items-center mt-4">
+            <div class="text-pm-gray text-sm">Capacidade: 13L</div>
+            <button class="btn bg-pm-red text-white border-none hover:bg-red-700">Detalhes</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mop Giratório Duo -->
+      <div class="card bg-base-100 shadow-xl product-card">
+        <figure class="h-64 bg-gradient-to-br from-orange-50 to-red-50 flex items-center justify-center relative">
+          <svg viewBox="0 0 250 220" class="h-48">
+            <rect x="115" y="15" width="16" height="130" rx="3" fill="#E53935"/>
+            <ellipse cx="124" cy="155" rx="48" ry="18" fill="#FF7043" opacity="0.7"/>
+            <rect x="76" y="143" width="96" height="22" rx="5" fill="#EF5350"/>
+            <rect x="76" y="168" width="96" height="22" rx="5" fill="#F44336" opacity="0.6"/>
+            <rect x="76" y="193" width="96" height="22" rx="5" fill="#D32F2F" opacity="0.4"/>
+            <circle cx="124" cy="45" r="11" fill="#FFAB91"/>
+          </svg>
+          <div class="absolute top-3 left-3">
+            <div class="badge badge-info text-white font-bold">Duo</div>
+          </div>
+        </figure>
+        <div class="card-body">
+          <h3 class="card-title text-xl font-bold">Mop Giratório Duo</h3>
+          <p class="text-pm-gray text-sm">Balde duplo empilhável que economiza espaço. Capacidade total de 13 litros com design compacto e moderno.</p>
+          <div class="flex flex-wrap gap-2 mt-2">
+            <div class="badge badge-outline badge-sm">Empilhável</div>
+            <div class="badge badge-outline badge-sm">Compacto</div>
+            <div class="badge badge-outline badge-sm">13 Litros</div>
+          </div>
+          <div class="card-actions justify-between items-center mt-4">
+            <div class="text-pm-gray text-sm">Capacidade: 13L</div>
+            <button class="btn bg-pm-red text-white border-none hover:bg-red-700">Detalhes</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mop Giratório Standard -->
+      <div class="card bg-base-100 shadow-xl product-card">
+        <figure class="h-64 bg-gradient-to-br from-red-50 to-yellow-50 flex items-center justify-center relative">
+          <svg viewBox="0 0 250 220" class="h-48">
+            <rect x="118" y="20" width="14" height="120" rx="3" fill="#E53935"/>
+            <ellipse cx="125" cy="150" rx="42" ry="16" fill="#EF5350" opacity="0.7"/>
+            <rect x="83" y="140" width="84" height="20" rx="4" fill="#F44336"/>
+            <rect x="83" y="163" width="84" height="35" rx="6" fill="#FFCDD2"/>
+            <circle cx="125" cy="45" r="10" fill="#FF8A80"/>
+            <circle cx="105" cy="178" r="8" fill="#BDBDBD" opacity="0.5"/>
+            <circle cx="145" cy="178" r="8" fill="#BDBDBD" opacity="0.5"/>
+          </svg>
+        </figure>
+        <div class="card-body">
+          <h3 class="card-title text-xl font-bold">Mop Giratório</h3>
+          <p class="text-pm-gray text-sm">Trava que permite fácil ajuste do cabo com cabo flexível e rodinhas para facilitar o transporte e manuseio.</p>
+          <div class="flex flex-wrap gap-2 mt-2">
+            <div class="badge badge-outline badge-sm">Rodinhas</div>
+            <div class="badge badge-outline badge-sm">Ajustável</div>
+            <div class="badge badge-outline badge-sm">8 Litros</div>
+          </div>
+          <div class="card-actions justify-between items-center mt-4">
+            <div class="text-pm-gray text-sm">Capacidade: 8L</div>
+            <button class="btn bg-pm-red text-white border-none hover:bg-red-700">Detalhes</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mop Spray -->
+      <div class="card bg-base-100 shadow-xl product-card">
+        <figure class="h-64 bg-gradient-to-br from-red-50 to-amber-50 flex items-center justify-center relative">
+          <svg viewBox="0 0 250 220" class="h-48">
+            <rect x="118" y="5" width="14" height="160" rx="3" fill="#E53935"/>
+            <rect x="100" y="170" width="50" height="14" rx="3" fill="#EF5350"/>
+            <rect x="105" y="184" width="40" height="30" rx="4" fill="#FFCDD2"/>
+            <rect x="126" y="50" width="18" height="40" rx="3" fill="#FF8A80" opacity="0.7"/>
+            <rect x="130" y="35" width="10" height="20" rx="2" fill="#FFAB91"/>
+            <path d="M134 55 L145 45" stroke="#E53935" stroke-width="2"/>
+          </svg>
+          <div class="absolute top-3 left-3">
+            <div class="badge badge-success text-white font-bold">Spray</div>
+          </div>
+        </figure>
+        <div class="card-body">
+          <h3 class="card-title text-xl font-bold">Mop Spray</h3>
+          <p class="text-pm-gray text-sm">Ideal para pisos, azulejos, vidros e outras superfícies. Sistema giratório permite alcançar áreas de difícil acesso com reservatório de 240ml.</p>
+          <div class="flex flex-wrap gap-2 mt-2">
+            <div class="badge badge-outline badge-sm">Reservatório</div>
+            <div class="badge badge-outline badge-sm">Microfibra</div>
+            <div class="badge badge-outline badge-sm">240ml</div>
+          </div>
+          <div class="card-actions justify-between items-center mt-4">
+            <div class="text-pm-gray text-sm">Refil lavável</div>
+            <button class="btn bg-pm-red text-white border-none hover:bg-red-700">Detalhes</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mop Flat -->
+      <div class="card bg-base-100 shadow-xl product-card">
+        <figure class="h-64 bg-gradient-to-br from-gray-50 to-red-50 flex items-center justify-center relative">
+          <svg viewBox="0 0 250 220" class="h-48">
+            <rect x="120" y="10" width="12" height="150" rx="2" fill="#9E9E9E"/>
+            <rect x="80" y="165" width="90" height="10" rx="3" fill="#E53935"/>
+            <rect x="75" y="175" width="100" height="30" rx="4" fill="#FFCDD2"/>
+            <rect x="75" y="175" width="100" height="8" rx="2" fill="#EF9A9A"/>
+          </svg>
+          <div class="absolute top-3 left-3">
+            <div class="badge badge-neutral text-white font-bold">Flat</div>
+          </div>
+        </figure>
+        <div class="card-body">
+          <h3 class="card-title text-xl font-bold">Mop Flat</h3>
+          <p class="text-pm-gray text-sm">Cabo em aço ajustável de 72cm a 120cm com base fina e flexível para acesso a áreas de difícil alcance.</p>
+          <div class="flex flex-wrap gap-2 mt-2">
+            <div class="badge badge-outline badge-sm">Ajustável</div>
+            <div class="badge badge-outline badge-sm">Flexível</div>
+            <div class="badge badge-outline badge-sm">72-120cm</div>
+          </div>
+          <div class="card-actions justify-between items-center mt-4">
+            <div class="text-pm-gray text-sm">Base articulada</div>
+            <button class="btn bg-pm-red text-white border-none hover:bg-red-700">Detalhes</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Limpa Vidros 2 em 1 -->
+      <div class="card bg-base-100 shadow-xl product-card">
+        <figure class="h-64 bg-gradient-to-br from-blue-50 to-red-50 flex items-center justify-center relative">
+          <svg viewBox="0 0 250 220" class="h-48">
+            <rect x="120" y="10" width="12" height="140" rx="2" fill="#90A4AE"/>
+            <rect x="90" y="155" width="70" height="12" rx="3" fill="#E53935"/>
+            <rect x="85" y="167" width="80" height="8" rx="2" fill="#42A5F5" opacity="0.7"/>
+            <rect x="85" y="178" width="80" height="25" rx="3" fill="#BBDEFB"/>
+            <rect x="85" y="178" width="80" height="6" rx="2" fill="#64B5F6"/>
+          </svg>
+          <div class="absolute top-3 left-3">
+            <div class="badge badge-info text-white font-bold">2 em 1</div>
+          </div>
+        </figure>
+        <div class="card-body">
+          <h3 class="card-title text-xl font-bold">Limpa Vidros 2 em 1</h3>
+          <p class="text-pm-gray text-sm">Mop de microfibra e rodo de borracha com cabo extensível em aço de 150cm. Perfeito para janelas e vidros.</p>
+          <div class="flex flex-wrap gap-2 mt-2">
+            <div class="badge badge-outline badge-sm">Microfibra</div>
+            <div class="badge badge-outline badge-sm">Rodo</div>
+            <div class="badge badge-outline badge-sm">150cm</div>
+          </div>
+          <div class="card-actions justify-between items-center mt-4">
+            <div class="text-pm-gray text-sm">Cabo extensível</div>
+            <button class="btn bg-pm-red text-white border-none hover:bg-red-700">Detalhes</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mop Esponja -->
+      <div class="card bg-base-100 shadow-xl product-card">
+        <figure class="h-64 bg-gradient-to-br from-yellow-50 to-red-50 flex items-center justify-center relative">
+          <svg viewBox="0 0 250 220" class="h-48">
+            <rect x="120" y="10" width="12" height="140" rx="2" fill="#E53935"/>
+            <rect x="95" y="155" width="60" height="10" rx="3" fill="#D32F2F"/>
+            <rect x="90" y="168" width="70" height="40" rx="5" fill="#FFF176" opacity="0.9"/>
+            <rect x="90" y="168" width="70" height="10" rx="3" fill="#FDD835"/>
+            <line x1="100" y1="180" x2="100" y2="205" stroke="#FBC02D" stroke-width="1"/>
+            <line x1="115" y1="180" x2="115" y2="205" stroke="#FBC02D" stroke-width="1"/>
+            <line x1="130" y1="180" x2="130" y2="205" stroke="#FBC02D" stroke-width="1"/>
+            <line x1="145" y1="180" x2="145" y2="205" stroke="#FBC02D" stroke-width="1"/>
+          </svg>
+        </figure>
+        <div class="card-body">
+          <h3 class="card-title text-xl font-bold">Mop Esponja</h3>
+          <p class="text-pm-gray text-sm">Esponja PVA ultra absorvente com mecanismo de torção prático. Ideal para superfícies lisas e delicadas.</p>
+          <div class="flex flex-wrap gap-2 mt-2">
+            <div class="badge badge-outline badge-sm">PVA</div>
+            <div class="badge badge-outline badge-sm">Absorvente</div>
+            <div class="badge badge-outline badge-sm">Torção</div>
+          </div>
+          <div class="card-actions justify-between items-center mt-4">
+            <div class="text-pm-gray text-sm">Ultra absorvente</div>
+            <button class="btn bg-pm-red text-white border-none hover:bg-red-700">Detalhes</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mop Escovão -->
+      <div class="card bg-base-100 shadow-xl product-card">
+        <figure class="h-64 bg-gradient-to-br from-red-50 to-gray-50 flex items-center justify-center relative">
+          <svg viewBox="0 0 250 220" class="h-48">
+            <rect x="120" y="10" width="12" height="130" rx="2" fill="#757575"/>
+            <rect x="90" y="145" width="70" height="15" rx="3" fill="#E53935"/>
+            <rect x="85" y="162" width="80" height="20" rx="4" fill="#EF5350"/>
+            <line x1="95" y1="182" x2="95" y2="205" stroke="#BDBDBD" stroke-width="2"/>
+            <line x1="105" y1="182" x2="105" y2="205" stroke="#BDBDBD" stroke-width="2"/>
+            <line x1="115" y1="182" x2="115" y2="205" stroke="#BDBDBD" stroke-width="2"/>
+            <line x1="125" y1="182" x2="125" y2="205" stroke="#BDBDBD" stroke-width="2"/>
+            <line x1="135" y1="182" x2="135" y2="205" stroke="#BDBDBD" stroke-width="2"/>
+            <line x1="145" y1="182" x2="145" y2="205" stroke="#BDBDBD" stroke-width="2"/>
+            <line x1="155" y1="182" x2="155" y2="205" stroke="#BDBDBD" stroke-width="2"/>
+          </svg>
+        </figure>
+        <div class="card-body">
+          <h3 class="card-title text-xl font-bold">Vassoura Escovão</h3>
+          <p class="text-pm-gray text-sm">Cerdas resistentes para limpeza pesada de áreas externas, garagens e quintais. Cabo reforçado.</p>
+          <div class="flex flex-wrap gap-2 mt-2">
+            <div class="badge badge-outline badge-sm">Resistente</div>
+            <div class="badge badge-outline badge-sm">Externo</div>
+            <div class="badge badge-outline badge-sm">Reforçado</div>
+          </div>
+          <div class="card-actions justify-between items-center mt-4">
+            <div class="text-pm-gray text-sm">Limpeza pesada</div>
+            <button class="btn bg-pm-red text-white border-none hover:bg-red-700">Detalhes</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-pm-dark py-16 px-4">
+    <div class="max-w-4xl mx-auto text-center text-white">
+      <h2 class="text-3xl font-black mb-4">Não encontrou o que procura?</h2>
+      <p class="text-white/70 mb-8">Entre em contato conosco e encontre o mop ideal para sua necessidade.</p>
+      <a href="contato.html" class="btn btn-lg bg-pm-red text-white border-none hover:bg-red-700">Fale Conosco</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-pm-dark text-white pt-12 pb-8 px-4 border-t border-white/10">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-8 border-b border-white/10">
+        <div>
+          <h3 class="text-2xl font-black mb-4"><span class="text-pm-red">POWER</span>MAID</h3>
+          <p class="text-white/60 text-sm">Inovadora, Moderna, Funcional. Nascida dentro do Grupo Camesa.</p>
+        </div>
+        <div>
+          <h4 class="font-bold text-lg mb-4">Produtos</h4>
+          <ul class="space-y-2 text-white/60">
+            <li><a href="mops.html" class="hover:text-pm-red transition-colors">Mops de Limpeza</a></li>
+            <li><a href="lixeiras.html" class="hover:text-pm-red transition-colors">Lixeiras</a></li>
+            <li><a href="lavanderia.html" class="hover:text-pm-red transition-colors">Lavanderia</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-lg mb-4">Institucional</h4>
+          <ul class="space-y-2 text-white/60">
+            <li><a href="sobre.html" class="hover:text-pm-red transition-colors">Quem Somos</a></li>
+            <li><a href="blog.html" class="hover:text-pm-red transition-colors">Blog</a></li>
+            <li><a href="contato.html" class="hover:text-pm-red transition-colors">Contato</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-lg mb-4">Contato</h4>
+          <ul class="space-y-2 text-white/60 text-sm">
+            <li>contato@powermaid.com.br</li>
+            <li>(11) 4002-8922</li>
+            <li>São Paulo, SP - Brasil</li>
+          </ul>
+        </div>
+      </div>
+      <div class="text-center pt-6 text-white/40 text-sm">
+        <p>&copy; 2026 Powermaid - Grupo Camesa. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
