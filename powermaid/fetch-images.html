@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Powermaid Image Extractor</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-base-200 min-h-screen p-8">
+  <div class="max-w-4xl mx-auto">
+    <h1 class="text-3xl font-black mb-2">Powermaid Image Extractor</h1>
+    <p class="text-gray-600 mb-6">This tool fetches all images from powermaid.com.br and saves the URL mapping. Open this file in your browser and click "Start".</p>
+
+    <div class="card bg-base-100 shadow-xl mb-6">
+      <div class="card-body">
+        <h2 class="card-title">Instructions</h2>
+        <ol class="list-decimal ml-5 space-y-1 text-sm">
+          <li>Click <strong>"Start Extraction"</strong> below</li>
+          <li>The tool will load each Powermaid page and extract image URLs</li>
+          <li>Once done, click <strong>"Download Mapping"</strong> to save <code>image-mapping.json</code></li>
+          <li>Place the JSON file in the <code>powermaid/</code> folder</li>
+          <li>Run: <code>node update-html.js</code> to update your HTML files</li>
+          <li>Alternatively, click <strong>"Download All Images"</strong> to save a zip of all images</li>
+        </ol>
+        <div class="card-actions mt-4">
+          <button id="startBtn" class="btn bg-red-600 text-white hover:bg-red-700" onclick="startExtraction()">Start Extraction</button>
+          <button id="downloadMapBtn" class="btn btn-outline" onclick="downloadMapping()" disabled>Download Mapping JSON</button>
+          <button id="downloadImgsBtn" class="btn btn-outline" onclick="downloadAllImages()" disabled>Download All Images</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="progress" class="hidden mb-6">
+      <progress id="progressBar" class="progress progress-error w-full" value="0" max="100"></progress>
+      <p id="progressText" class="text-sm text-gray-500 mt-1"></p>
+    </div>
+
+    <div id="log" class="card bg-base-100 shadow-xl">
+      <div class="card-body">
+        <h2 class="card-title">Log</h2>
+        <div id="logContent" class="bg-gray-900 text-green-400 p-4 rounded-lg font-mono text-xs max-h-96 overflow-y-auto">
+          <p>Ready. Click "Start Extraction" to begin.</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="results" class="hidden mt-6">
+      <h2 class="text-2xl font-bold mb-4">Extracted Images</h2>
+      <div id="imageGrid" class="grid grid-cols-2 md:grid-cols-4 gap-4"></div>
+    </div>
+  </div>
+
+  <script>
+    const PAGES = [
+      { url: 'https://powermaid.com.br/', name: 'home' },
+      { url: 'https://powermaid.com.br/mops/', name: 'mops' },
+      { url: 'https://powermaid.com.br/lixeiras/', name: 'lixeiras' },
+      { url: 'https://powermaid.com.br/lavanderia/', name: 'lavanderia' },
+      { url: 'https://powermaid.com.br/quem-somos/', name: 'quem-somos' },
+      { url: 'https://powermaid.com.br/sobre/', name: 'sobre' },
+      { url: 'https://powermaid.com.br/blog/', name: 'blog' },
+      { url: 'https://powermaid.com.br/contato-2/', name: 'contato' },
+      { url: 'https://powermaid.com.br/esponjas/', name: 'esponjas' },
+      { url: 'https://powermaid.com.br/panos/', name: 'panos' },
+      { url: 'https://powermaid.com.br/embaixadoras/', name: 'embaixadoras' },
+      { url: 'https://powermaid.com.br/eventos/', name: 'eventos' },
+      { url: 'https://novo.powermaid.com.br/', name: 'novo-home' },
+    ];
+
+    let allImages = {};
+    const logEl = document.getElementById('logContent');
+
+    function log(msg, type = 'info') {
+      const colors = { info: 'text-green-400', error: 'text-red-400', warn: 'text-yellow-400', success: 'text-cyan-400' };
+      logEl.innerHTML += `<p class="${colors[type] || 'text-green-400'}">[${new Date().toLocaleTimeString()}] ${msg}</p>`;
+      logEl.scrollTop = logEl.scrollHeight;
+    }
+
+    function extractImagesFromHTML(html, pageUrl) {
+      const urls = new Set();
+      const doc = new DOMParser().parseFromString(html, 'text/html');
+
+      // img tags
+      doc.querySelectorAll('img').forEach(img => {
+        ['src', 'data-src', 'data-lazy-src', 'data-original'].forEach(attr => {
+          const v = img.getAttribute(attr);
+          if (v && !v.startsWith('data:')) urls.add(resolveUrl(v, pageUrl));
+        });
+        const srcset = img.getAttribute('srcset');
+        if (srcset) {
+          srcset.split(',').forEach(s => {
+            const u = s.trim().split(' ')[0];
+            if (u && !u.startsWith('data:')) urls.add(resolveUrl(u, pageUrl));
+          });
+        }
+      });
+
+      // background images in style attributes
+      doc.querySelectorAll('[style]').forEach(el => {
+        const m = el.style.backgroundImage?.match(/url\(["']?([^"')]+)/);
+        if (m) urls.add(resolveUrl(m[1], pageUrl));
+      });
+
+      // og:image and other meta
+      doc.querySelectorAll('meta[content]').forEach(meta => {
+        const c = meta.getAttribute('content');
+        if (c && /\.(jpg|jpeg|png|gif|webp|svg|avif)/i.test(c)) {
+          urls.add(resolveUrl(c, pageUrl));
+        }
+      });
+
+      // CSS background-image in style tags
+      doc.querySelectorAll('style').forEach(style => {
+        const matches = style.textContent.matchAll(/url\(["']?([^"')]+\.(?:jpg|jpeg|png|gif|webp|svg|avif)[^"')]*)/gi);
+        for (const m of matches) {
+          urls.add(resolveUrl(m[1], pageUrl));
+        }
+      });
+
+      // Link tags (favicons, etc.)
+      doc.querySelectorAll('link[href]').forEach(link => {
+        const h = link.getAttribute('href');
+        if (h && /\.(jpg|jpeg|png|gif|webp|svg|avif|ico)/i.test(h)) {
+          urls.add(resolveUrl(h, pageUrl));
+        }
+      });
+
+      return [...urls].filter(u => u && u.startsWith('http'));
+    }
+
+    function resolveUrl(url, base) {
+      try {
+        if (url.startsWith('//')) return 'https:' + url;
+        return new URL(url, base).href;
+      } catch { return url; }
+    }
+
+    function sanitizeFilename(url) {
+      try {
+        const u = new URL(url);
+        let name = u.pathname.replace(/^\//, '').replace(/\//g, '_');
+        name = name.replace(/[^a-zA-Z0-9._-]/g, '_').replace(/_+/g, '_');
+        if (name.length > 100) {
+          const ext = name.match(/\.[a-z]+$/)?.[0] || '.jpg';
+          name = name.substring(0, 96) + ext;
+        }
+        return name || 'image.jpg';
+      } catch { return 'image.jpg'; }
+    }
+
+    async function fetchPage(url) {
+      // Try direct fetch first
+      try {
+        const res = await fetch(url, { mode: 'cors' });
+        if (res.ok) return await res.text();
+      } catch {}
+
+      // Try no-cors (won't give us body, but let's try with a CORS proxy)
+      const proxies = [
+        `https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`,
+        `https://corsproxy.io/?${encodeURIComponent(url)}`,
+      ];
+      for (const proxy of proxies) {
+        try {
+          const res = await fetch(proxy);
+          if (res.ok) {
+            const text = await res.text();
+            if (text.length > 500) return text;
+          }
+        } catch {}
+      }
+
+      return null;
+    }
+
+    async function startExtraction() {
+      document.getElementById('startBtn').disabled = true;
+      document.getElementById('progress').classList.remove('hidden');
+      logEl.innerHTML = '';
+      allImages = {};
+
+      log('Starting image extraction from powermaid.com.br...');
+
+      for (let i = 0; i < PAGES.length; i++) {
+        const page = PAGES[i];
+        const pct = Math.round(((i + 1) / PAGES.length) * 100);
+        document.getElementById('progressBar').value = pct;
+        document.getElementById('progressText').textContent = `Processing ${page.name} (${i + 1}/${PAGES.length})...`;
+
+        log(`Fetching: ${page.url}`);
+        const html = await fetchPage(page.url);
+
+        if (!html) {
+          log(`  Failed to fetch ${page.name}`, 'error');
+          continue;
+        }
+
+        const images = extractImagesFromHTML(html, page.url);
+        log(`  Found ${images.length} images on ${page.name}`, 'success');
+
+        for (const imgUrl of images) {
+          if (!allImages[imgUrl]) {
+            allImages[imgUrl] = {
+              local: 'images/' + sanitizeFilename(imgUrl),
+              pages: [page.name],
+              url: imgUrl,
+            };
+          } else {
+            if (!allImages[imgUrl].pages.includes(page.name)) {
+              allImages[imgUrl].pages.push(page.name);
+            }
+          }
+        }
+      }
+
+      const total = Object.keys(allImages).length;
+      log(`\nExtraction complete! Found ${total} unique images.`, 'success');
+
+      document.getElementById('downloadMapBtn').disabled = false;
+      document.getElementById('downloadImgsBtn').disabled = false;
+      document.getElementById('startBtn').disabled = false;
+      document.getElementById('progressText').textContent = `Done! ${total} images found.`;
+
+      // Show preview
+      showPreview();
+    }
+
+    function showPreview() {
+      const results = document.getElementById('results');
+      const grid = document.getElementById('imageGrid');
+      results.classList.remove('hidden');
+      grid.innerHTML = '';
+
+      for (const [url, info] of Object.entries(allImages)) {
+        const card = document.createElement('div');
+        card.className = 'card bg-base-100 shadow-md overflow-hidden';
+        card.innerHTML = `
+          <figure class="h-32 bg-gray-100">
+            <img src="${url}" alt="${info.local}" class="h-full w-full object-contain p-2"
+                 onerror="this.parentElement.innerHTML='<div class=\\'flex items-center justify-center h-full text-gray-400 text-xs\\'>Failed</div>'" loading="lazy">
+          </figure>
+          <div class="p-2">
+            <p class="text-xs font-mono truncate" title="${url}">${info.local}</p>
+            <p class="text-xs text-gray-500">${info.pages.join(', ')}</p>
+          </div>
+        `;
+        grid.appendChild(card);
+      }
+    }
+
+    function downloadMapping() {
+      const mapping = {};
+      for (const [url, info] of Object.entries(allImages)) {
+        mapping[url] = { local: info.local, pages: info.pages, status: 'pending_download' };
+      }
+      const blob = new Blob([JSON.stringify(mapping, null, 2)], { type: 'application/json' });
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = 'image-mapping.json';
+      a.click();
+      log('Downloaded image-mapping.json', 'success');
+    }
+
+    async function downloadAllImages() {
+      log('Downloading all images... This may take a moment.');
+      document.getElementById('downloadImgsBtn').disabled = true;
+
+      const mapping = {};
+      let success = 0, failed = 0;
+
+      for (const [url, info] of Object.entries(allImages)) {
+        try {
+          const res = await fetch(url);
+          if (!res.ok) throw new Error(`HTTP ${res.status}`);
+          const blob = await res.blob();
+
+          // Trigger download for each image
+          const a = document.createElement('a');
+          a.href = URL.createObjectURL(blob);
+          a.download = sanitizeFilename(url);
+          a.click();
+          URL.revokeObjectURL(a.href);
+
+          mapping[url] = { local: info.local, pages: info.pages, status: 'downloaded', size: blob.size };
+          success++;
+          log(`  Downloaded: ${info.local}`, 'success');
+
+          // Small delay to avoid overwhelming the browser
+          await new Promise(r => setTimeout(r, 200));
+        } catch (err) {
+          mapping[url] = { local: info.local, pages: info.pages, status: `failed: ${err.message}` };
+          failed++;
+          log(`  Failed: ${info.local} - ${err.message}`, 'error');
+        }
+      }
+
+      // Also save the updated mapping
+      const blob = new Blob([JSON.stringify(mapping, null, 2)], { type: 'application/json' });
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = 'image-mapping.json';
+      a.click();
+
+      log(`\nDone! Downloaded: ${success}, Failed: ${failed}`, 'success');
+      log('Move downloaded images to the powermaid/images/ folder, then run: node update-html.js');
+      document.getElementById('downloadImgsBtn').disabled = false;
+    }
+  </script>
+</body>
+</html>
